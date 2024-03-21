@@ -18,40 +18,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
     />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <!-- Custom styles for this template -->
-    <style>
-      body {
-        font-size: 12px; /* Default font size */
-      }
-    </style>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.9.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script
-      defer
-      src="/__/firebase/10.9.0/firebase-analytics-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/10.9.0/firebase-remote-config-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/10.9.0/firebase-performance-compat.js"
-    ></script>
-    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
   </head>
   <body>
     <main>
       <div class="container">
-        <!-- S1 Intro - start -->
+        <!-- S2 Intro - start -->
         <div class="p-3" align="center">
           <h1>Welcome to Opa Hi AI portal!</h1>
           <h2>The place AI chatbot makes sense :)</h2>
         </div>
 
-        <!-- S2 Bots - start -->
+        <!-- S2 Intro - end -->
+
+        <!-- S3 Bots - start -->
         <div class="p-3">
           <div class="row g-0 p-2">
             <div class="col-4 border">
@@ -134,7 +115,15 @@
             </div>
           </div>
         </div>
-      </div>
+        <!-- S3 Bots - end -->
+
+        <!-- S4 Favs - start -->
+        <!-- S4 Favs - end -->
+
+
+
+        <!-- S5 Favs - start -->
+        <!-- S5 Favs - end -->
     </main>
     <!--- ENDS ---->
     <script
@@ -152,20 +141,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        try {
-          let app = firebase.app();
-          let features = ["app"].filter(
-            (feature) => typeof app[feature] === "function"
-          );
-          console.log(`Firebase SDK loaded with ${features.join(", ")}`);
-        } catch (e) {
-          console.error(e);
-          console.log("Error loading the Firebase SDK, check the console.");
-        }
-      });
-    </script>
   </body>
 </html>
