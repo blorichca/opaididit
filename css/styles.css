@@ -1,0 +1,73 @@
+/* styles.css */
+
+/* General */
+body {
+  font-size: 12px; /* Default font size */
+}
+
+/*******************************************
+ *                                         *
+ * - S2 Donations Section Styles.          *
+ *                                         *
+ *******************************************/
+
+#S2-Intro {
+  background-color: #f0f0f0; /* Light grey background, adjust color as needed */
+  padding: 20px; /* Padding around the section content */
+  border-radius: 8px; /* Rounded corners for the section */
+}
+
+/* Styling for hoverA1bot image to encourage interaction */
+.S2-Intro-hoverA1bot img {
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block; /* Allows transformation effects */
+  vertical-align: middle; /* Aligns image with text vertically */
+}
+
+/* Hover effect for the hoverA1bot image */
+.S2-Intro-hoverA1bot:hover img {
+  transform: scale(1.1); /* Scale image to 110% on hover */
+  cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+/* Styling for the moreInfo paragraphs */
+.S2-Intro-moreInfo p {
+  font-size: 16px; /* Font size for readability, adjust as needed */
+  color: #333; /* Dark text for contrast, adjust color as needed */
+  margin-bottom: 10px; /* Spacing between paragraphs */
+  line-height: 1.6; /* Spacing between lines for readability */
+}
+
+/*******************************************
+ *                                         *
+ * - S5 Donations Section Styles           *
+ *                                         *
+ *******************************************/
+
+#S5-Donations {
+  background-color: #f8f9fa; /* Light grey background for contrast */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.S5-Donations-title {
+  color: #333;
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 0.5rem;
+}
+
+.S5-Donations-text {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.paypal-button {
+  display: inline-block; /* Align the button correctly */
+  margin: 0; /* Remove any default margins */
+}
+
+@media (min-width: 576px) {
+  .S5-Donations-title {
+    font-size: 2rem; /* Larger font size on small devices and up */
+  }
+}
