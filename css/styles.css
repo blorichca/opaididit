@@ -10,32 +10,9 @@ body {
  * - S2 Donations Section Styles.          *
  *                                         *
  *******************************************/
-
-#S2-Intro {
-  background-color: #f0f0f0; /* Light grey background, adjust color as needed */
-  padding: 20px; /* Padding around the section content */
-  border-radius: 8px; /* Rounded corners for the section */
-}
-
-/* Styling for hoverA1bot image to encourage interaction */
-.S2-Intro-hoverA1bot img {
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  display: inline-block; /* Allows transformation effects */
-  vertical-align: middle; /* Aligns image with text vertically */
-}
-
-/* Hover effect for the hoverA1bot image */
-.S2-Intro-hoverA1bot:hover img {
-  transform: scale(1.1); /* Scale image to 110% on hover */
-  cursor: pointer; /* Change cursor to indicate clickable */
-}
-
-/* Styling for the moreInfo paragraphs */
-.S2-Intro-moreInfo p {
-  font-size: 16px; /* Font size for readability, adjust as needed */
-  color: #333; /* Dark text for contrast, adjust color as needed */
-  margin-bottom: 10px; /* Spacing between paragraphs */
-  line-height: 1.6; /* Spacing between lines for readability */
+/* S2-Intro Styling */
+#S2-Intro strong {
+  font-weight: bold;
 }
 
 /*******************************************

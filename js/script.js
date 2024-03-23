@@ -1,10 +1,7 @@
 // S2 Intro - Hover
 
-let tooltipTriggerList = [].slice.call(
-  document.querySelectorAll('[data-bs-toggle="tooltip"]')
-);
-let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl);
+$(document).ready(function () {
+  $("#hoverA1bot").popover();
 });
 
 // Data for each bot
