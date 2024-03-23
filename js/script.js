@@ -26,7 +26,7 @@ const bots = [
     name: "Gemini",
     company: "google",
     link: "https://gemini.google.com/app",
-    imgSrc: "img/bot-copilot-icon.png",
+    imgSrc: "img/bot-gemini-icon.png",
     imgAlt: "google icon",
     freeFeatures: ["Image creation 2", "Internet Access", "Plugins"],
     paidFeatures: ["Advanced"],

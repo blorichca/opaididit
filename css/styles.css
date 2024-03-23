@@ -5,14 +5,55 @@ body {
   font-size: 12px; /* Default font size */
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -20rem 0;
+  }
+  100% {
+    background-position: 20rem 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 20rem 100%;
+}
+
 /*******************************************
  *                                         *
  * - S2 Donations Section Styles.          *
  *                                         *
  *******************************************/
-/* S2-Intro Styling */
-#S2-Intro strong {
-  font-weight: bold;
+
+/* Extended S2-Intro Section Styles */
+#S2-Intro {
+  padding: 2rem 0;
+  background-color: #fff; /* Assuming white background for this section */
+  margin-bottom: 2rem;
+}
+
+#S2-Intro h2 {
+  font-size: 1.25rem; /* Larger font size for better readability */
+  margin-bottom: 1rem;
+  color: #212529; /* Bootstrap default for text */
+}
+
+#S2-Intro p {
+  font-size: 1rem;
+  color: #212529; /* Bootstrap default for text */
+}
+
+#S2-Intro ul {
+  padding-left: 20px; /* Proper indentation for bullets */
+}
+
+#S2-Intro a#hoverA1bot {
+  display: inline-block; /* For proper popover positioning */
+  margin-top: 1rem;
+  text-decoration: underline; /* To indicate interactivity */
+  color: #007bff; /* Bootstrap default for link color */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
 }
 
 /*******************************************
