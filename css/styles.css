@@ -56,6 +56,29 @@ body {
   cursor: pointer; /* Changes the cursor to indicate it's clickable */
 }
 
+/*** s3 **/
+
+#bots .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bots .row > div {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#bots .row > div > * {
+  flex-grow: 1;
+}
+
+#bots img {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  object-fit: contain; /* To maintain aspect ratio */
+}
+
 /*******************************************
  *                                         *
  * - S5 Donations Section Styles           *
