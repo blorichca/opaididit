@@ -52,35 +52,61 @@ body {
  * - S1  - AI          *
  *                                         *
  *******************************************/
-
-/* Ensures image is never larger than its container */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+/* Base styles for S1 section */
+#S1-WhatIsAI {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* Specific styles for S1 image */
-#S1-WhatIsAI #S1-AIImage {
+/* Increase text size within the S1 section */
+#S1-WhatIsAI .col-md-6:first-child {
+  font-size: 1.5em; /* 50% larger than the base font size */
+  padding: 15px; /* Provides spacing around the text */
+}
+
+/* Adjust the image size within the S1 section */
+#S1-WhatIsAI img.img-fluid {
+  max-width: 50%; /* Makes the image 50% smaller than its max potential width */
+  height: auto; /* Keeps the image's aspect ratio intact */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  #S1-WhatIsAI .col-md-6:first-child,
+  #S1-WhatIsAI .col-md-6:nth-child(2) {
+    flex-basis: 50%; /* Each column takes up 50% of the flex container's space on medium screens and up */
+  }
+}
+
+/*******************************************
+ *                                         *
+ * - S2 - Bots          *
+ *                                         *
+ *******************************************/
+
+/* Specific styles for S2 image */
+#s2-content .img-fluid {
   max-width: 100%; /* Full width on small devices */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #S1-WhatIsAI #S1-AIImage {
+  #s2-content .img-fluid {
     max-width: 75%; /* Adjust to 75% of the container on medium devices */
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #S1-WhatIsAI #S1-AIImage {
+  #s2-content .img-fluid {
     max-width: 50%; /* Adjust to 50% of the container on large devices */
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #S1-WhatIsAI #S1-AIImage {
+  #s2-content .img-fluid {
     max-width: 40%; /* Adjust to 40% of the container on extra large devices */
   }
 }
