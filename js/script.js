@@ -4,6 +4,32 @@ $(document).ready(function () {
   $("#hoverA1bot").popover();
 });
 
+// Wait for the document to be ready
+document.addEventListener("DOMContentLoaded", function () {
+  // Placeholder functions for tooltip functionality
+  function showTooltip(event) {
+    // Implement the show tooltip logic here
+    // You might need to fetch the title attribute of the event.target and show it in a custom tooltip element.
+  }
+
+  function hideTooltip() {
+    // Implement the hide tooltip logic here
+    // This would typically hide the tooltip element.
+  }
+
+  // Add hover event listeners for S1 list items
+  var s1Items = document.querySelectorAll(".s1-list-item");
+  s1Items.forEach(function (item) {
+    item.addEventListener("mouseenter", showTooltip);
+    item.addEventListener("mouseleave", hideTooltip);
+  });
+
+  // ... Assuming that the rest of your code handles the 's2-list-item' similarly
+});
+
+// The bot card creation code seems fine and would execute after the DOM is fully loaded
+// It dynamically creates cards for each bot in the 'bots' array and adds them to the page
+
 // S3 Bots - Dyna,mic creation of bot cards
 
 const bots = [
