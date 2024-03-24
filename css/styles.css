@@ -40,36 +40,6 @@ body {
  *                                         *
  *******************************************/
 
-/* Extended S2-Intro Section Styles */
-#S2-Intro {
-  padding: 2rem 0;
-  background-color: #fff; /* Assuming white background for this section */
-  margin-bottom: 2rem;
-}
-
-#S2-Intro h2 {
-  font-size: 1.25rem; /* Larger font size for better readability */
-  margin-bottom: 1rem;
-  color: #212529; /* Bootstrap default for text */
-}
-
-#S2-Intro p {
-  font-size: 1rem;
-  color: #212529; /* Bootstrap default for text */
-}
-
-#S2-Intro ul {
-  padding-left: 20px; /* Proper indentation for bullets */
-}
-
-#S2-Intro a#hoverA1bot {
-  display: inline-block; /* For proper popover positioning */
-  margin-top: 1rem;
-  text-decoration: underline; /* To indicate interactivity */
-  color: #007bff; /* Bootstrap default for link color */
-  cursor: pointer; /* Changes the cursor to indicate it's clickable */
-}
-
 /*** s3 **/
 
 #bots .row {
