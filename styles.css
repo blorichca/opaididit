@@ -84,32 +84,33 @@ body {
  * - S2 - Bots          *
  *                                         *
  *******************************************/
-
-/* Specific styles for S2 image */
-#s2-content .img-fluid {
-  max-width: 100%; /* Full width on small devices */
+/* Base styles for S2 section */
+#s2-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Adjusting the text size within the S2 section */
+#s2-content .col-md-6:first-child {
+  font-size: 1.5em; /* Making the text 50% larger */
+  padding: 15px; /* Adding some padding around the text for better readability */
+}
+
+/* Adjusting the image size within the S2 section */
+#s2-content img.img-fluid {
+  max-width: 50%; /* Making the image 50% smaller */
+  height: auto; /* Ensuring the aspect ratio of the image is maintained */
+}
+
+/* Responsive adjustments for medium devices and up */
 @media (min-width: 768px) {
-  #s2-content .img-fluid {
-    max-width: 75%; /* Adjust to 75% of the container on medium devices */
+  #s2-content .col-md-6 {
+    flex-basis: 50%; /* Each column (text and image) takes up 50% of the flex container's space on medium screens and up */
   }
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  #s2-content .img-fluid {
-    max-width: 50%; /* Adjust to 50% of the container on large devices */
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  #s2-content .img-fluid {
-    max-width: 40%; /* Adjust to 40% of the container on extra large devices */
-  }
-}
+/* Further adjustments for larger screens can be added here if needed */
 
 /*******************************************
  *                                         *
