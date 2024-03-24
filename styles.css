@@ -52,32 +52,54 @@ body {
  * - S1  - AI          *
  *                                         *
  *******************************************/
-/* Base styles for S1 section */
-#S1-WhatIsAI {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+
+/* S1-QuoteByOpa Styles - Start */
+#S1-QuoteByOpa {
+  background-color: #957dad; /* Lavender */
+  border-radius: 25px;
+  padding: 2rem 3rem; /* Increased padding on sides */
+  position: relative;
+  margin: 1rem auto; /* Center the quote container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%; /* Control the width to manage line length */
 }
 
-/* Increase text size within the S1 section */
-#S1-WhatIsAI .col-md-6:first-child {
-  font-size: 1.5em; /* 50% larger than the base font size */
-  padding: 15px; /* Provides spacing around the text */
+#S1-QuoteByOpa .quote-text {
+  color: #ffffff;
+  font-size: 1rem; /* Adjust base font size if needed */
+  z-index: 1;
+  position: relative;
+  margin: 0 auto; /* Center the text */
+  max-width: 90%; /* Adjust width to control line length */
 }
 
-/* Adjust the image size within the S1 section */
-#S1-WhatIsAI img.img-fluid {
-  max-width: 50%; /* Makes the image 50% smaller than its max potential width */
-  height: auto; /* Keeps the image's aspect ratio intact */
+#S1-QuoteByOpa .quote-mark {
+  color: rgba(255, 255, 255, 0.3); /* Lighter color for the quote symbols */
+  font-size: 5rem; /* Adjust based on the desired size */
+  position: absolute;
+  z-index: 0;
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  #S1-WhatIsAI .col-md-6:first-child,
-  #S1-WhatIsAI .col-md-6:nth-child(2) {
-    flex-basis: 50%; /* Each column takes up 50% of the flex container's space on medium screens and up */
-  }
+#S1-QuoteByOpa .quote-mark-open {
+  top: -1rem;
+  left: 10%;
 }
+
+#S1-QuoteByOpa .quote-mark-close {
+  bottom: -1rem;
+  right: 10%;
+}
+
+#S1-QuoteByOpa .quote-attribution {
+  color: #ffffff;
+  text-align: right;
+  font-size: 0.8rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 3rem; /* Align attribution with the right side of text */
+}
+/* S1-QuoteByOpa Styles - End */
 
 /*******************************************
  *                                         *
