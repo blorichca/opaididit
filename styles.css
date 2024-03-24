@@ -53,57 +53,58 @@ body {
  *                                         *
  *******************************************/
 
-/* S1-QuoteByOpa Styles - Start */
+/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
 #S1-QuoteByOpa {
-  background-color: #957dad; /* Lavender */
-  border-radius: 25px;
-  padding: 2rem 3rem; /* Increased padding on sides */
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+  color: white;
   position: relative;
-  margin: 1rem auto; /* Center the quote container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 80%; /* Control the width to manage line length */
 }
 
-#S1-QuoteByOpa .quote-text {
-  color: #ffffff;
-  font-size: 1rem; /* Adjust base font size if needed */
-  z-index: 1;
-  position: relative;
-  margin: 0 auto; /* Center the text */
-  max-width: 90%; /* Adjust width to control line length */
-}
-
-#S1-QuoteByOpa .quote-mark {
-  color: rgba(255, 255, 255, 0.3); /* Lighter color for the quote symbols */
-  font-size: 5rem; /* Adjust based on the desired size */
-  position: absolute;
-  z-index: 0;
-}
-
-#S1-QuoteByOpa .quote-mark-open {
-  top: -1rem;
-  left: 10%;
-}
-
-#S1-QuoteByOpa .quote-mark-close {
-  bottom: -1rem;
-  right: 10%;
-}
-
-#S1-QuoteByOpa .quote-attribution {
-  color: #ffffff;
-  text-align: right;
-  font-size: 0.8rem;
+#S1-QuoteByOpa blockquote {
   font-style: italic;
-  position: absolute;
-  bottom: 0.5rem;
-  right: 3rem; /* Align attribution with the right side of text */
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 1em; /* Adjusted for larger quotes */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
-/* S1-QuoteByOpa Styles - End */
+
+#S1-QuoteByOpa blockquote::before,
+#S1-QuoteByOpa blockquote::after {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.5em; /* Increased size for the quotation marks */
+  line-height: 0.1; /* Adjust line height to better align quotes with the text */
+}
+
+#S1-QuoteByOpa blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -10px; /* Adjust positioning for alignment */
+}
+
+#S1-QuoteByOpa blockquote::after {
+  content: "”";
+  position: absolute;
+  right: -10px; /* Adjust positioning for alignment */
+  bottom: -20px; /* Adjust bottom position to better align with the bottom of the text */
+}
+
+#S1-QuoteByOpa .blockquote-footer {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  margin-top: 1em;
+  font-weight: 400;
+}
 
 /*******************************************
  *                                         *
- * - S2 - Bots          *
+ * - S2 - BotsBaseline          *
  *                                         *
  *******************************************/
 /* Base styles for S2 section */
@@ -119,10 +120,11 @@ body {
   padding: 15px; /* Adding some padding around the text for better readability */
 }
 
-/* Adjusting the image size within the S2 section */
+/* Adjusting the image size within the S2 section and aligning it to the right */
 #s2-content img.img-fluid {
   max-width: 50%; /* Making the image 50% smaller */
   height: auto; /* Ensuring the aspect ratio of the image is maintained */
+  margin-left: auto; /* Aligns the image to the right */
 }
 
 /* Responsive adjustments for medium devices and up */
