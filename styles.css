@@ -1,0 +1,198 @@
+/* styles.css */
+
+/* General */
+body {
+  font-size: 12px; /* Default font size */
+  font-family: "Arial", sans-serif;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -20rem 0;
+  }
+  100% {
+    background-position: 20rem 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 20rem 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+  margin-bottom: 20px; /* Creates space between navbar and content */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Centers the footer content */
+}
+
+/* Tooltip S1 + S2 Styles */
+.tooltip {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+  font-size: 0.875rem;
+}
+
+/*******************************************
+ *                                         *
+ * - S1  - AI          *
+ *                                         *
+ *******************************************/
+
+/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
+#S1-QuoteByOpa {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+  color: white;
+  position: relative;
+}
+
+#S1-QuoteByOpa blockquote {
+  font-style: italic;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 1em; /* Adjusted for larger quotes */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+#S1-QuoteByOpa blockquote::before,
+#S1-QuoteByOpa blockquote::after {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.5em; /* Increased size for the quotation marks */
+  line-height: 0.1; /* Adjust line height to better align quotes with the text */
+}
+
+#S1-QuoteByOpa blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -10px; /* Adjust positioning for alignment */
+}
+
+#S1-QuoteByOpa blockquote::after {
+  content: "”";
+  position: absolute;
+  right: -10px; /* Adjust positioning for alignment */
+  bottom: -20px; /* Adjust bottom position to better align with the bottom of the text */
+}
+
+#S1-QuoteByOpa .blockquote-footer {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  margin-top: 1em;
+  font-weight: 400;
+}
+
+/*******************************************
+ *                                         *
+ * - S2 - BotsBaseline          *
+ *                                         *
+ *******************************************/
+/* Base styles for S2 section */
+#s2-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Adjusting the text size within the S2 section */
+#s2-content .col-md-6:first-child {
+  font-size: 1.5em; /* Making the text 50% larger */
+  padding: 15px; /* Adding some padding around the text for better readability */
+}
+
+/* Adjusting the image size within the S2 section and aligning it to the right */
+#s2-content img.img-fluid {
+  max-width: 50%; /* Making the image 50% smaller */
+  height: auto; /* Ensuring the aspect ratio of the image is maintained */
+  margin-left: auto; /* Aligns the image to the right */
+}
+
+/* Responsive adjustments for medium devices and up */
+@media (min-width: 768px) {
+  #s2-content .col-md-6 {
+    flex-basis: 50%; /* Each column (text and image) takes up 50% of the flex container's space on medium screens and up */
+  }
+}
+
+/* Further adjustments for larger screens can be added here if needed */
+
+/*******************************************
+ *                                         *
+ * - S3 - Bots          *
+ *                                         *
+ *******************************************/
+
+#bots .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bots .row > div {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#bots .row > div > * {
+  flex-grow: 1;
+}
+
+#bots img {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  object-fit: contain; /* To maintain aspect ratio */
+}
+
+/*******************************************
+ *                                         *
+ * - S5 Donations Section Styles           *
+ *                                         *
+ *******************************************/
+
+#S5-Donations {
+  background-color: #f8f9fa; /* Light grey background for contrast */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.S5-Donations-title {
+  color: #333;
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 0.5rem;
+}
+
+.S5-Donations-text {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.paypal-button {
+  display: inline-block; /* Align the button correctly */
+  margin: 0; /* Remove any default margins */
+}
+
+@media (min-width: 576px) {
+  .S5-Donations-title {
+    font-size: 2rem; /* Larger font size on small devices and up */
+  }
+}
