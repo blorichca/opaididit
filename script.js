@@ -1,10 +1,13 @@
 const aiChatbotsInfo = [
   {
     title: "What are AI Chatbots?",
-    description:
-      "Chatbots let you communicate directly with powerful AI models.",
-  },
-  {
+    bulletPoints: [
+      {
+        text: "User-AI interaction platforms",
+        description:
+          "Chatbots let you communicate directly with powerful AI models.",
+      },
+    ],
     title: "What makes them so special?",
     bulletPoints: [
       {
