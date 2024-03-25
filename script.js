@@ -1,12 +1,15 @@
 // S2
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
-    container: "body", // Append the tooltip to the body to position it relative to the body
-    trigger: "hover", // Trigger on hover
-    html: true, // If you want HTML content inside the tooltip
-    delay: { show: 500, hide: 100 }, // Add a delay to the show and hide of the tooltips
+    container: "body",
+    placement: "top",
+    trigger: "hover focus",
+    boundary: "window", // Keep tooltips within the bounds of the window
   });
 });
+
+// ... Rest of your existing JavaScript code ...
 
 const aiChatbotsInfo = [
   {
@@ -66,9 +69,11 @@ const aiChatbotsInfo = [
   },
 ];
 
-// Corrected image dimensions according to your requirements
+// Corrected image dimensions according to your
+const questionHeight = 60;
 const imageHeight = 890; // Total height of the image you provided
 const imageWidth = 1024; // Assuming the full image width as before
+const imageHeightNet = imageHeight - 3 * questionHeight;
 
 // Function to generate chatbot cards with dynamic heights and background positions
 function generateChatbotCards() {
@@ -83,12 +88,12 @@ function generateChatbotCards() {
   // Calculate the card heights and assign background position
   aiChatbotsInfo.forEach((info, index) => {
     // Calculate card height as specified
-    const cardHeight = (info.bulletPoints.length * imageHeight) / 8;
+    const cardHeight = (info.bulletPoints.length * imageHeightNet) / 8;
 
     // Create the card element with dynamic height and background properties
     const card = document.createElement("div");
     card.className = `col-12 card my-3`;
-    card.style.height = `${cardHeight}px`; // Set the dynamic height for the card
+    card.style.height = `${cardHeight + questionHeight}px`; // Set the dynamic height for the card
 
     // Background properties
     card.style.backgroundImage = `url('img/s2_ai_chatbot_opa_1.png')`; // Placeholder for your image path
