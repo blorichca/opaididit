@@ -33,25 +33,54 @@ body {
   text-align: center; /* Centers the footer content */
 }
 
-/* Tooltip S1 + S2 Styles */
-.tooltip {
-  background-color: #f5f5f5;
-  color: #333;
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  z-index: 1000;
-  display: none; /* Initially hidden */
-  font-size: 0.875rem;
-}
-
 /*******************************************
 *                                         *
 * - S2 - AI                               *
 *                                         *
 *******************************************/
+
+/* Tooltip base styles */
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  visibility: visible;
+  font-size: 0.875rem;
+}
+
+/* Tooltip inner content */
+.tooltip-inner {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  color: #000;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Positioning the arrow for the tooltip */
+.tooltip .arrow::before {
+  position: absolute;
+  content: "";
+  border-style: solid;
+}
+
+/* Tooltip placement adjustments */
+.tooltip.bs-tooltip-top .arrow::before {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #fff;
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #fff;
+}
 
 /* S2-Features Full-Row Cards Styling */
 #S2-Features .row {
@@ -65,7 +94,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #000; /* Black text */
-  margin-bottom: 1rem; /* White gap between cards */
+  margin-bottom: 12px; /* White gap between cards */
   padding: 1rem;
   border-radius: 0.5rem; /* Rounded corners for cards */
   position: relative; /* Establishes a positioning context for pseudo-elements */

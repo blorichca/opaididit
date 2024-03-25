@@ -1,3 +1,13 @@
+// S2
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+    container: "body", // Append the tooltip to the body to position it relative to the body
+    trigger: "hover", // Trigger on hover
+    html: true, // If you want HTML content inside the tooltip
+    delay: { show: 500, hide: 100 }, // Add a delay to the show and hide of the tooltips
+  });
+});
+
 const aiChatbotsInfo = [
   {
     title: "What are AI Chatbots?",
@@ -73,7 +83,7 @@ function generateChatbotCards() {
   // Calculate the card heights and assign background position
   aiChatbotsInfo.forEach((info, index) => {
     // Calculate card height as specified
-    const cardHeight = (info.bulletPoints.length * imageHeight) / 7;
+    const cardHeight = (info.bulletPoints.length * imageHeight) / 8;
 
     // Create the card element with dynamic height and background properties
     const card = document.createElement("div");
@@ -114,6 +124,7 @@ function generateChatbotCards() {
     container.appendChild(card); // Append card to container
 
     // Add the current card's height to the accumulatedHeight for the next card's background position
+    // + gap(12px)
     accumulatedHeight += cardHeight;
   });
 }
