@@ -1,38 +1,110 @@
 <!DOCTYPE html>
 <!-- DevEnv: VSCode , LinuxVM, HP Dragonfly Pro Chromebook -->
 <html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="OpaHiAI" content="AI" />
-    <meta name="author" content="OPAHIAI" />
-    <title>Opa! Hi AI!</title>
-    <link
-      href="img/favicon.ico"  
-      rel="icon"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
-    />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="OpaHiAI" content="AI" />
+  <meta name="author" content="OPAHIAI" />
+  <title>Opa! Hi AI!</title>
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    
+    /*******************************************
+ *                                         *
+ * - S1 - AI          *
+ *                                         *
+ *******************************************/
+
+/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
+#S1-QuoteByOpa {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+  color: white;
+  position: relative;
+}
+
+#S1-QuoteByOpa blockquote {
+  font-style: italic;
+  font-size: 1.8em; /* Default font size for larger screens */
+  font-weight: 300;
+  margin: 0;
+  padding: 0 1em 0 3em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+#S1-QuoteByOpa blockquote::before,
+#S1-QuoteByOpa blockquote::after {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 9em; /* Default size for larger screens */
+  line-height: 0.1;
+}
+
+#S1-QuoteByOpa blockquote::before {
+  content: "“";
+  position: absolute;
+  bottom: 50px;
+  left: -10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#S1-QuoteByOpa blockquote::after {
+  content: "”";
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+}
+
+#S1-QuoteByOpa .blockquote-footer {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  margin-top: 1em;
+  margin-right: 3em;
+  font-weight: 400;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #S1-QuoteByOpa blockquote {
+    font-size: 1.2em; /* Smaller font size on small screens */
+  }
+
+  #S1-QuoteByOpa blockquote::before,
+  #S1-QuoteByOpa blockquote::after {
+    font-size: 6em; /* Adjust quotation marks size for smaller screens */
+  }
+}
+
+
+/*******************************************
+ *                                         *
+ * - S2 - BotsBaseline          *
+ *                                         *
+ *******************************************/
+
+ 
+
+  </style>
+</head>
+
+<body>
 
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Opa! Hi AI!</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,82 +123,72 @@
   </nav>
   <!-- Navbar End -->
 
-    <main>
-      <div class="container">
-                
-<!-- S1 Quote by Opa - start -->
+  <main>
+    <div class="container">
+
+  <!-- S1 Quote by Opa - start -->
 <div id="S1-QuoteByOpa" class="row">
   <div class="col-12">
-    <blockquote class="blockquote text-center">
-      <p class="mb-0">Think of it like this: AI chatbots are your own personal team of geniuses. They teach, they inspire, they can even help you find a job – and they don't charge a dime.</p>
+    <blockquote class="blockquote">
+      <p class="mb-0">Think of it like this: AI chatbots are your own personal team of geniuses. <br>
+        They teach, they inspire, they can even help you find a job – all for free!.</p>
       <footer class="blockquote-footer">Opa</footer>
     </blockquote>
   </div>
 </div>
 <!-- S1-QuoteByOpa - End -->
 
-
-<!-- S2 General AI Chatbots - start -->
-<div class="row" id="s2-content">
-  <div class="col-md-6">
-    <h3 id="s2-header">General AI Chatbots Capabilities</h3>
-    <ul id="s2-list">
-      <li>The entry point to AI</li>
-      <li>Basic AI chatbot skills:
-        <ol>
-          <li>Conversation engagement</li>
-          <li>Summarize text</li>
-          <li>Adaptive learning</li>
-        </ol>
-      </li>
-    </ul>
-  </div>
-  <div class="col-md-6 text-md-right"> <!-- For text alignment -->
-    <img src="img/s2_ai_chatbot_opa.png" alt="AI Chatbot Image" class="img-fluid float-md-end" id="S2-AIImage"> <!-- float-md-end for Bootstrap 5 -->
+<!-- S2-Features Section Start -->
+<div id="S2-Features" class="container text-center my-5">
+  <div class="row">
+    <!-- Cards will be dynamically inserted here using JavaScript -->
   </div>
 </div>
-<!-- S2 General AI Chatbots - end -->
+<!-- S2-Features Section End -->
 
 
 
-        <!-- S3 Bots - start -->
+      <!-- S3 Bots - start -->
       <div id="bots" class="p-3">
         <div class="row g-0 p-2">
           <!-- Bots will be inserted here -->
         </div>
       </div>
-        <!-- S3 Bots - end -->
+      <!-- S3 Bots - end -->
 
-        <!-- S4 Favs - start -->
-        <!-- S4 Favs - end -->
+      <!-- S4 Favs - start -->
+      <!-- S4 Favs - end -->
 
-<!-- S5 Donations - start -->
-<div id="S5-Donations" class="container my-4">
-  <div class="row align-items-center">
-    <!-- PayPal Mascot Image -->
-    <div class="col-sm-5 mb-3 mb-sm-0">
-      <img src="img/opapaypal.png" alt="Support Us" class="img-fluid">
-    </div>
-    
-    <!-- Donation Call to Action and Button -->
-    <div class="col-sm-7 text-center text-sm-left">
-      <h2 class="S5-Donations-title">Support Our Project</h2>
-      <p class="S5-Donations-text">Your donations help us keep going and improve.</p>
-      <form action="https://www.paypal.com/donate" method="post" target="_top">
-        <input type="hidden" name="business" value="PBK6PPPVA3FC8" />
-        <input type="hidden" name="no_recurring" value="0" />
-        <input type="hidden" name="item_name" value="Help us unlock the power of AI tech for everyone. Your donation supports our mission to empower those less tech-savvy." />
-        <input type="hidden" name="currency_code" value="USD" />
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" class="paypal-button" />
-      </form>
-    </div>
-  </div>
-</div>
-<!-- S5 Donations - end -->
+      <!-- S5 Donations - start -->
+      <div id="S5-Donations" class="container my-4">
+        <div class="row align-items-center">
+          <!-- PayPal Mascot Image -->
+          <div class="col-sm-5 mb-3 mb-sm-0">
+            <img src="img/opapaypal.png" alt="Support Us" class="img-fluid">
+          </div>
+
+          <!-- Donation Call to Action and Button -->
+          <div class="col-sm-7 text-center text-sm-left">
+            <h2 class="S5-Donations-title">Support Our Project</h2>
+            <p class="S5-Donations-text">Your donations help us keep going and improve.</p>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="business" value="PBK6PPPVA3FC8" />
+              <input type="hidden" name="no_recurring" value="0" />
+              <input type="hidden" name="item_name"
+                value="Help us unlock the power of AI tech for everyone. Your donation supports our mission to empower those less tech-savvy." />
+              <input type="hidden" name="currency_code" value="USD" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"
+                class="paypal-button" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- S5 Donations - end -->
 
 
-    </main>
-    <!--- ENDS ---->
+  </main>
+  <!--- ENDS ---->
 
 
   <!-- Footer Start -->
@@ -137,21 +199,16 @@
   </footer>
   <!-- Footer End -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

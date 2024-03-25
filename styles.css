@@ -33,108 +33,136 @@ body {
   text-align: center; /* Centers the footer content */
 }
 
-/* Tooltip S1 + S2 Styles */
+/*******************************************
+*                                         *
+* - S2 - AI                               *
+*                                         *
+*******************************************/
+
+/* Tooltip base styles */
 .tooltip {
-  background-color: #f5f5f5;
-  color: #333;
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   position: absolute;
-  z-index: 1000;
-  display: none; /* Initially hidden */
+  z-index: 1030;
+  display: block;
+  visibility: visible;
   font-size: 0.875rem;
 }
 
-/*******************************************
- *                                         *
- * - S1  - AI          *
- *                                         *
- *******************************************/
-
-/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
-#S1-QuoteByOpa {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 2em 0;
-  color: white;
-  position: relative;
+/* Tooltip inner content */
+.tooltip-inner {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  color: #000;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  max-width: 200px;
 }
 
-#S1-QuoteByOpa blockquote {
-  font-style: italic;
-  font-size: 1.8em;
-  font-weight: 300;
-  margin: 0;
-  padding: 0 1em; /* Adjusted for larger quotes */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-#S1-QuoteByOpa blockquote::before,
-#S1-QuoteByOpa blockquote::after {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 2.5em; /* Increased size for the quotation marks */
-  line-height: 0.1; /* Adjust line height to better align quotes with the text */
-}
-
-#S1-QuoteByOpa blockquote::before {
-  content: "“";
+/* Positioning the arrow for the tooltip */
+.tooltip .arrow::before {
   position: absolute;
-  left: -10px; /* Adjust positioning for alignment */
+  content: "";
+  border-style: solid;
 }
 
-#S1-QuoteByOpa blockquote::after {
-  content: "”";
-  position: absolute;
-  right: -10px; /* Adjust positioning for alignment */
-  bottom: -20px; /* Adjust bottom position to better align with the bottom of the text */
+/* Tooltip placement adjustments */
+.tooltip.bs-tooltip-top .arrow::before {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #fff;
 }
 
-#S1-QuoteByOpa .blockquote-footer {
-  font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: right;
-  margin-top: 1em;
-  font-weight: 400;
+.tooltip.bs-tooltip-bottom .arrow::before {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #fff;
 }
 
-/*******************************************
- *                                         *
- * - S2 - BotsBaseline          *
- *                                         *
- *******************************************/
-/* Base styles for S2 section */
-#s2-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+/* S2-Features Full-Row Cards Styling */
+#S2-Features .row {
+  justify-content: center;
 }
 
-/* Adjusting the text size within the S2 section */
-#s2-content .col-md-6:first-child {
-  font-size: 1.5em; /* Making the text 50% larger */
-  padding: 15px; /* Adding some padding around the text for better readability */
+#S2-Features .card {
+  background-color: #fff; /* White background for the text */
+  margin-bottom: 1rem; /* Space between cards */
+  background-image: url("img/s2_ai_chatbot_opa_1.png"); /* Your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #000; /* Black text */
+  margin-bottom: 12px; /* White gap between cards */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners for cards */
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+  overflow: hidden; /* Ensures no content spills out */
 }
 
-/* Adjusting the image size within the S2 section and aligning it to the right */
-#s2-content img.img-fluid {
-  max-width: 50%; /* Making the image 50% smaller */
-  height: auto; /* Ensuring the aspect ratio of the image is maintained */
-  margin-left: auto; /* Aligns the image to the right */
+#S2-Features .card:hover .card-description {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Responsive adjustments for medium devices and up */
-@media (min-width: 768px) {
-  #s2-content .col-md-6 {
-    flex-basis: 50%; /* Each column (text and image) takes up 50% of the flex container's space on medium screens and up */
+.card-description {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  color: #000; /* Black text for readability */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem; /* Space between text and description */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  #S2-Features .card {
+    background-size: auto 100%;
+  }
+
+  .card-description {
+    padding: 0.5rem;
   }
 }
+#S2-Features .card .card-body {
+  background-color: transparent; /* Ensure the card body is transparent to see the image */
+  /* Other styling as needed */
+}
 
-/* Further adjustments for larger screens can be added here if needed */
+#S2-Features .card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  z-index: 1;
+}
+
+#S2-Features .card-body {
+  position: relative; /* Ensure card content appears above the overlay */
+  z-index: 2;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.card:hover .card-description {
+  opacity: 1;
+  visibility: visible;
+}
 
 /*******************************************
  *                                         *
