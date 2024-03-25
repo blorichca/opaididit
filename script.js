@@ -56,10 +56,11 @@ const aiChatbotsInfo = [
   },
 ];
 
-// Adjust these variables based on the actual size of your image
-const imageHeight = 768; // The height of the full image
-const imageWidth = 768; // The width of the full image
-const totalCards = aiChatbotsInfo.length;
+// Corrected image dimensions according to your requirements
+const imageHeight = 890; // Total height of the image you provided
+const imageWidth = 1024; // Assuming the full image width as before
+
+// Function to generate chatbot cards with dynamic heights and background positions
 function generateChatbotCards() {
   const container = document.querySelector("#S2-Features .row");
   if (!container) {
@@ -67,40 +68,24 @@ function generateChatbotCards() {
     return;
   }
 
-  const imageWidth = 1024; // Width of the full image
-  const imageHeight = 1024; // Height of the full image
-  let accumulatedOffset = 0; // Tracks the cumulative height offset for the background image
+  let accumulatedHeight = 0; // Keep track of the accumulated height for background positioning
 
-  // Calculate the total content height for all cards to distribute the background image correctly
-  const totalContentHeight = aiChatbotsInfo.reduce((totalHeight, card) => {
-    // Estimate each card's content height (arbitrary unit for each bullet point plus base height)
-    const cardContentHeight = card.bulletPoints
-      ? card.bulletPoints.length * 50 + 200
-      : 200;
-    return totalHeight + cardContentHeight;
-  }, 0);
-
-  // Create cards and assign background image portions to each
+  // Calculate the card heights and assign background position
   aiChatbotsInfo.forEach((info, index) => {
-    // Estimate the card's content height
-    const cardContentHeight = info.bulletPoints
-      ? info.bulletPoints.length * 50 + 200
-      : 200;
+    // Calculate card height as specified
+    const cardHeight = (info.bulletPoints.length * imageHeight) / 7;
 
-    // Calculate the height ratio for the current card against the total content height
-    const cardHeightRatio = cardContentHeight / totalContentHeight;
-
+    // Create the card element with dynamic height and background properties
     const card = document.createElement("div");
     card.className = `col-12 card my-3`;
-    card.style.backgroundImage = "url('img/s2_ai_chatbot_opa_1.png')"; // Update this path if needed
-    card.style.backgroundRepeat = "no-repeat";
-    // Position background image proportionally
-    card.style.backgroundPosition = `center ${
-      (-accumulatedOffset / totalContentHeight) * imageHeight
-    }px`;
+    card.style.height = `${cardHeight}px`; // Set the dynamic height for the card
+
+    // Background properties
+    card.style.backgroundImage = `url('img/s2_ai_chatbot_opa_1.png')`; // Placeholder for your image path
     card.style.backgroundSize = `${imageWidth}px ${imageHeight}px`;
-    // Set card height proportional to its content height ratio
-    card.style.height = `${cardHeightRatio * imageHeight}px`;
+    card.style.backgroundRepeat = "no-repeat";
+    // Calculate the Y position of the background to correspond with the height of previous cards
+    card.style.backgroundPosition = `center ${-accumulatedHeight}px`;
 
     card.innerHTML = `
       <div class="card-body d-flex flex-column justify-content-center" style="height:100%;">
@@ -126,14 +111,15 @@ function generateChatbotCards() {
       </div>
     `;
 
-    container.appendChild(card);
-    // Increment the accumulated offset for the next card by the proportional height of the current card
-    accumulatedOffset += (cardContentHeight / totalContentHeight) * imageHeight;
+    container.appendChild(card); // Append card to container
+
+    // Add the current card's height to the accumulatedHeight for the next card's background position
+    accumulatedHeight += cardHeight;
   });
 }
 
+// Invoke the card generation function when the document content has loaded
 document.addEventListener("DOMContentLoaded", generateChatbotCards);
-
 // S3 Bots - Dyna,mic creation of bot cards
 
 const bots = [
