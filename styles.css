@@ -48,6 +48,94 @@ body {
 }
 
 /*******************************************
+*                                         *
+* - S1 - AI                               *
+*                                         *
+*******************************************/
+/* Existing styles for S1... */
+/* S2-Features Full-Row Cards Styling */
+#S2-Features .row {
+  justify-content: center;
+}
+
+#S2-Features .card {
+  background-color: #fff; /* White background for the text */
+  margin-bottom: 1rem; /* Space between cards */
+  background-image: url("img/s2_ai_chatbot_opa_1.png"); /* Your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #000; /* Black text */
+  margin-bottom: 1rem; /* White gap between cards */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners for cards */
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+  overflow: hidden; /* Ensures no content spills out */
+}
+
+#S2-Features .card:hover .card-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-description {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  color: #000; /* Black text for readability */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem; /* Space between text and description */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  #S2-Features .card {
+    background-size: auto 100%;
+  }
+
+  .card-description {
+    padding: 0.5rem;
+  }
+}
+#S2-Features .card .card-body {
+  background-color: transparent; /* Ensure the card body is transparent to see the image */
+  /* Other styling as needed */
+}
+
+#S2-Features .card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  z-index: 1;
+}
+
+#S2-Features .card-body {
+  position: relative; /* Ensure card content appears above the overlay */
+  z-index: 2;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.card:hover .card-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*******************************************
  *                                         *
  * - S3 - Bots          *
  *                                         *
