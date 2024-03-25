@@ -1,7 +1,8 @@
 // S2 Intro - Hover
 
+// Initialize tooltips for S2-Features Section
 $(document).ready(function () {
-  $("#hoverA1bot").popover();
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 // Wait for the document to be ready

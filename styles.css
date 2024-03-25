@@ -49,40 +49,6 @@ body {
 
 /*******************************************
  *                                         *
- * - S2 - BotsBaseline          *
- *                                         *
- *******************************************/
-/* Base styles for S2 section */
-#s2-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* Adjusting the text size within the S2 section */
-#s2-content .col-md-6:first-child {
-  font-size: 1.5em; /* Making the text 50% larger */
-  padding: 15px; /* Adding some padding around the text for better readability */
-}
-
-/* Adjusting the image size within the S2 section and aligning it to the right */
-#s2-content img.img-fluid {
-  max-width: 50%; /* Making the image 50% smaller */
-  height: auto; /* Ensuring the aspect ratio of the image is maintained */
-  margin-left: auto; /* Aligns the image to the right */
-}
-
-/* Responsive adjustments for medium devices and up */
-@media (min-width: 768px) {
-  #s2-content .col-md-6 {
-    flex-basis: 50%; /* Each column (text and image) takes up 50% of the flex container's space on medium screens and up */
-  }
-}
-
-/* Further adjustments for larger screens can be added here if needed */
-
-/*******************************************
- *                                         *
  * - S3 - Bots          *
  *                                         *
  *******************************************/
