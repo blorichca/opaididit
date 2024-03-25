@@ -1,0 +1,78 @@
+## S2 AI?
+
+### A bootstrap component
+
+---
+
+Features 3 Cards forming a single Background Image:
+
+- S2 should display 3 hardcoded feature vertical cards (each card takes a full bootstrap line as in other components fthe page)
+
+- All 3 cards are starting with a question followed by var number of bullet point
+
+  1. Card 1 - 1 bp
+  2. Card 2 - 4 bp 
+  3. Card 3 - 3 bp 
+
+- The full component size should contain
+
+  1. 8 * bp height
+  2. 3 * question height
+  3. 2 * gap between card
+
+- Each card will show the correlated portion of the image, so all 3 together will form the image
+- The gaps between the cards will be white
+
+### Bg image
+
+- splitting the pic will be done in js
+- Path img/s2_ai_chatbot_opa_1.png
+- Style 50% transparent
+- If frame is too short, zoom the image
+
+### Info Icons with Tooltips:
+
+- Each card should contain an info icon (using Font Awesome) positioned appropriately (e.g., top-right corner of the card).
+- Tooltips should be initialized with the initialize Tooltips function, which attaches to the info icons.
+- When hovering over the info icon, the card will be covered in black and the description of the cards will be written in white
+
+### Tooltip Content and Behavior:
+
+- The content for tooltips should be gathered by mapping over bullet Points for each card, combining the text and description into HTML format.
+
+### Visual and Interaction Details:
+
+- The icon should remain visible when not hovered over.
+- Upon hovering over the card, the icon will jump drawing attention of the user
+
+### Technical Specifications:
+
+- The Bootstrap framework should be utilized, specifically the grid system and carousel component.
+- Font Awesome may be used for icons.
+
+### Design and Responsiveness:
+
+- A mobile-first design approach should be prioritized, ensuring the cards are responsive and adapt well to different screen sizes.
+- Consistent styling should be maintained across all elements of the page.
+
+### Customization and Modularity:
+
+- The page should allow for easy updates to the feature cards' content.
+- The code structure should support modularity, allowing sections to be easily modified or supported through well-documented code and designated CSS classes.
+
+### Better engineering
+
+- Comments!
+- All sections specific classes should start with the “S<SectionNumber>-” prefix
+
+### Cards style
+
+- all the text is centered
+
+### Cards info
+
+- Title -> question
+- Tex > bullet point
+- Description -> relevant tooltip-----
+- Take content from aiChatbotsInfo but build  the cards data manually
+

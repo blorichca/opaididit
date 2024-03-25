@@ -39,129 +39,51 @@ body {
 *                                         *
 *******************************************/
 
-/* Tooltip base styles */
-.tooltip {
-  position: absolute;
-  z-index: 1030;
-  display: block;
-  visibility: visible;
-  font-size: 0.875rem;
-}
-
-/* Tooltip inner content */
-.tooltip-inner {
-  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-  color: #000;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  max-width: 200px;
-}
-
-/* Positioning the arrow for the tooltip */
-.tooltip .arrow::before {
-  position: absolute;
-  content: "";
-  border-style: solid;
-}
-
-/* Tooltip placement adjustments */
-.tooltip.bs-tooltip-top .arrow::before {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #fff;
-}
-
-.tooltip.bs-tooltip-bottom .arrow::before {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #fff;
-}
-
-/* S2-Features Full-Row Cards Styling */
-#S2-Features .row {
-  justify-content: center;
-}
-
-#S2-Features .card {
-  background-color: #fff; /* White background for the text */
-  margin-bottom: 1rem; /* Space between cards */
-  background-image: url("img/s2_ai_chatbot_opa_1.png"); /* Your image path */
+/* S2 AI Features Section Styles */
+.S2-FeatureCard {
   background-size: cover;
   background-repeat: no-repeat;
-  color: #000; /* Black text */
-  margin-bottom: 12px; /* White gap between cards */
-  padding: 1rem;
-  border-radius: 0.5rem; /* Rounded corners for cards */
-  position: relative; /* Establishes a positioning context for pseudo-elements */
-  overflow: hidden; /* Ensures no content spills out */
+  opacity: 0.5; /* Adjust transparency */
 }
 
-#S2-Features .card:hover .card-description {
-  opacity: 1;
-  visibility: visible;
+.S2-FeatureCard .card-body {
+  position: relative;
 }
 
-.card-description {
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
-  color: #000; /* Black text for readability */
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  margin-top: 0.5rem; /* Space between text and description */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+.S2-FeatureCard .list-unstyled {
+  text-align: center;
+  padding: 0;
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  #S2-Features .card {
-    background-size: auto 100%;
-  }
-
-  .card-description {
-    padding: 0.5rem;
-  }
-}
-#S2-Features .card .card-body {
-  background-color: transparent; /* Ensure the card body is transparent to see the image */
-  /* Other styling as needed */
-}
-
-#S2-Features .card::after {
-  content: "";
-  display: block;
+.S2-FeatureCard .info-icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
-  z-index: 1;
-}
-
-#S2-Features .card-body {
-  position: relative; /* Ensure card content appears above the overlay */
-  z-index: 2;
-}
-
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  top: 10px;
   right: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  color: black;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
 }
 
-.card:hover .card-description {
-  opacity: 1;
-  visibility: visible;
+/* Tooltip only appears when hovering over the info icon */
+.S2-FeatureCard .card-body .info-icon:hover ~ .tooltip-inner {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.S2-FeatureCard:hover .info-icon {
+  animation: jump 0.5s ease;
+  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /*******************************************
