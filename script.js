@@ -8,6 +8,8 @@ const aiChatbotsInfo = [
           "Chatbots let you communicate directly with powerful AI models.",
       },
     ],
+  },
+  {
     title: "What makes them so special?",
     bulletPoints: [
       {
