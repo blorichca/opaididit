@@ -1,22 +1,20 @@
 // S2
 
-$(function () {
-  // Initialize tooltips
-  $('[data-toggle="tooltip"]').tooltip();
-
-  // Dynamically set the tooltip content for each feature card
-  $(".S2-FeatureCard .info-icon").each(function (index) {
-    // Get the corresponding info data for the card
-    var infoData = aiChatbotsInfo[index];
-    var tooltipContent = infoData.bulletPoints
-      .map(function (bp) {
-        return "<strong>" + bp.text + "</strong>: " + bp.description;
-      })
-      .join("<br>");
-
-    // Set the title attribute to the constructed tooltip content
-    $(this).attr("data-original-title", tooltipContent);
-  });
+// If you want to add any interactive JavaScript behavior
+$(document).ready(function () {
+  // Code to handle the hover event on the info icon
+  $(".info-icon").hover(
+    function () {
+      // Mouse enter function
+      $(this).siblings(".original-content").hide();
+      $(this).siblings(".overlay-content").show();
+    },
+    function () {
+      // Mouse leave function
+      $(this).siblings(".original-content").show();
+      $(this).siblings(".overlay-content").hide();
+    }
+  );
 });
 
 const aiChatbotsInfo = [

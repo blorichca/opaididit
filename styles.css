@@ -38,52 +38,26 @@ body {
 * - S2 - AI                               *
 *                                         *
 *******************************************/
-
-/* S2 AI Features Section Styles */
+/* Card with overlay CSS */
 .S2-FeatureCard {
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5; /* Adjust transparency */
+  opacity: 0.9; /* Adjust transparency */
+  transition: opacity 0.5s; /* Smooth transition for hover effect */
+  /* Other styles as needed */
 }
 
-.S2-FeatureCard .card-body {
-  position: relative;
+.S2-FeatureCard:hover .original-content {
+  display: none; /* Hide the original content when hovering */
 }
 
-.S2-FeatureCard .list-unstyled {
-  text-align: center;
-  padding: 0;
+.S2-FeatureCard:hover .overlay-content {
+  display: flex; /* Show overlay content when hovering */
 }
 
-.S2-FeatureCard .info-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: black;
-  cursor: pointer;
-  z-index: 5;
-  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
-}
-
-/* Tooltip only appears when hovering over the info icon */
-.S2-FeatureCard .card-body .info-icon:hover ~ .tooltip-inner {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-}
-
-.S2-FeatureCard:hover .info-icon {
-  animation: jump 0.5s ease;
-  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
-}
-
-@keyframes jump {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.S2-FeatureCard .info-icon:hover {
+  transform: scale(1.1); /* Enlarge the icon a bit when hovering */
+  transition: transform 0.3s; /* Smooth icon scaling */
 }
 
 /*******************************************
