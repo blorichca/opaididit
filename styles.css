@@ -90,12 +90,6 @@ body {
   font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
 }
 
-@media (min-width: 476px) {
-  .S2-FeatureCard:hover .info-icon {
-    font-size: 1em; /* Adjust this value to make the icon bigger or smaller */
-  }
-}
-
 @keyframes jump {
   0%,
   100% {
@@ -105,23 +99,22 @@ body {
     transform: translateY(-10px);
   }
 }
-
-.S2-FeatureCard.card:nth-child(1) {
-  background-image: url("img/ai_bot_opa_right_1.png");
-  background-position: top;
-  background-size: 100% 202px; /* Adjust this value based on your needs */
+/* CSS */
+.S2-FeatureCard {
+  background-repeat: no-repeat;
+  background-size: 100% 300%;
 }
 
-.S2-FeatureCard.card:nth-child(2) {
-  background-image: url("img/ai_bot_opa_right_2.png");
-  background-position: center;
-  background-size: 100% 472px; /* Adjust this value based on your needs */
+.S2-FeatureCard:nth-child(1) {
+  background-position: 0% 0%;
 }
 
-.S2-FeatureCard.card:nth-child(3) {
-  background-image: url("img/ai_bot_opa_right_3.png");
-  background-position: bottom;
-  background-size: 100% 406px; /* Adjust this value based on your needs */
+.S2-FeatureCard:nth-child(2) {
+  background-position: 0% 50%;
+}
+
+.S2-FeatureCard:nth-child(3) {
+  background-position: 0% 100%;
 }
 
 /*******************************************
