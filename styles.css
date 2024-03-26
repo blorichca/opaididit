@@ -34,56 +34,60 @@ body {
 }
 
 /*******************************************
- *                                         *
- * - S1 - AI          *
- *                                         *
+ * S1 - Quote by Opa Styling
+ * Enhanced Design with Larger Quotation Marks
  *******************************************/
 
-/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
+/* Container styling */
 #S1-QuoteByOpa {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  padding: 2em;
+  background: linear-gradient(
+    135deg,
+    #6e8efb,
+    #a777e3
+  ); /* Gradient background */
+  padding: 1em; /* Reduced padding to shorten height */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 2em 0;
   color: white;
   position: relative;
-  animation: slide-in 2s ease-out;
+  animation: slide-in 2s ease-out; /* Corrected animation name */
 }
 
+/* Blockquote styling */
 #S1-QuoteByOpa blockquote {
   font-style: italic;
-  font-size: 2.2em; /* Increased font size */
+  font-size: 2.2em; /* Increased font size for emphasis */
   font-weight: 300;
   margin: 0;
-  padding: 0 1em 0 4em;
+  padding: 0 1em 0 4em; /* Adjusted padding */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
+/* Styling for opening and closing quotation marks */
 #S1-QuoteByOpa blockquote::before,
 #S1-QuoteByOpa blockquote::after {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 9em;
-  /* Default size for larger screens */
+  font-size: 9em; /* Size of quotation marks */
   line-height: 0.1;
 }
 
 #S1-QuoteByOpa blockquote::before {
-  content: "“";
+  content: "“"; /* Opening quote */
   position: absolute;
   bottom: 50px;
   left: -10px;
-  color: rgba(255, 255, 255, 0.75);
 }
 
 #S1-QuoteByOpa blockquote::after {
-  content: "”";
+  content: "”"; /* Closing quote */
   position: absolute;
   right: -10px;
   bottom: -20px;
 }
 
+/* Blockquote footer styling */
 #S1-QuoteByOpa .blockquote-footer {
   font-size: 1.2em;
   color: rgba(255, 255, 255, 0.8);
@@ -93,29 +97,19 @@ body {
   font-weight: 400;
 }
 
-/* Media query for smaller screens */
+/* Media queries for responsive adjustments */
 @media (max-width: 768px) {
   #S1-QuoteByOpa blockquote {
-    font-size: 1.2em;
-    /* Smaller font size on small screens */
+    font-size: 1.2em; /* Smaller font size on small screens */
   }
 
   #S1-QuoteByOpa blockquote::before,
   #S1-QuoteByOpa blockquote::after {
-    font-size: 6em;
-    /* Adjust quotation marks size for smaller screens */
+    font-size: 6em; /* Adjusted size for smaller screens */
   }
 }
-/* S1 Quote by Opa Styling - Enhanced Design with Larger Quotation Marks */
-#S1-QuoteByOpa {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  padding: 2em;
-  color: white;
-  position: relative;
-  animation: slideInFromLeft 2s ease;
-}
 
-/* Animation */
+/* Slide-in animation */
 @keyframes slide-in {
   0% {
     transform: translateX(100%);
@@ -126,7 +120,6 @@ body {
     opacity: 1;
   }
 }
-/* Rest of your CSS remains the same */
 
 /*******************************************
 *                                         *
@@ -134,83 +127,105 @@ body {
 *                                         *
 *******************************************/
 
-#S2-AI {
-  position: relative;
+/* Styling for the folder structure and question items */
+.S2-FolderStructure .S2-QuestionItem {
+  background: #f0f0f0; /* Light grey background for question items */
+  cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+  margin-bottom: 5px; /* Space between question items */
 }
 
-.S2-FeatureCard {
-  background-color: transparent; /* Make the cards transparent */
-  background-size: contain; /* Ensure the entire image is visible */
-  background-repeat: no-repeat;
-  background-position: center; /* Center the image */
-  opacity: 0.5; /* Adjust transparency */
-  transition: opacity 0.5s ease; /* Add transition for smooth effect */
+/* Styling for the titles of the questions within folders */
+.S2-FolderStructure .S2-QuestionTitle {
+  padding: 10px; /* Padding around the title for spacing */
+  font-weight: bold; /* Bold font for emphasis */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items within */
+  align-items: center; /* Align items vertically */
 }
 
-.S2-FeatureCard .card-body {
-  position: relative;
-  font-size: 1.5em; /* Adjust this value to make the icon bigger or smaller */
+/* Styling for the detailed content within the collapsible areas */
+.S2-FolderStructure .S2-CardDetail {
+  background: #ffffff; /* White background for the details area */
+  border: 1px solid #ddd; /* Light grey border for distinction */
 }
 
-.S2-FeatureCard .list-unstyled {
-  text-align: left;
-  padding: 0;
+/* Adjustments for the positioning of the info icon */
+.S2-InfoIcon {
+  margin-left: 10px; /* Space from the text to the icon */
 }
 
-.S2-FeatureCard .info-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: black;
-  cursor: pointer;
-  z-index: 5;
-  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
+/* Transparency adjustment specifically for images within the card detail */
+.S2-CardDetail img {
+  background-size: cover; /* Ensure it covers the full area */
+  opacity: 0.5; /* Adjust for desired transparency */
 }
 
-.S2-FeatureCard .overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.965);
-  color: white;
-  padding: 20px;
-  overflow: auto;
+/* Styling for folders with hover effect */
+.S2-FolderStructure {
+  background: #eeeeee; /* Light grey background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside folders */
+  margin-bottom: 15px; /* Space between folders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  max-height: 150px; /* Control the height of the folder */
+  overflow: hidden; /* Hide overflow to maintain the design integrity */
 }
 
-.S2-FeatureCard:hover .info-icon {
-  animation: jump 0.5s ease;
-  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
+.S2-FolderStructure:hover {
+  transform: translateY(-10px); /* Moves the folder up slightly on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow to simulate "lifting" */
 }
 
-@keyframes jump {
-  0%,
-  100% {
-    transform: translateY(0);
+/* Style for question title and content readability */
+.S2-QuestionTitle {
+  font-weight: bold; /* Ensuring titles are bold */
+  cursor: pointer; /* Indicating clickability */
+  font-size: 1.7em;
+}
+
+/* Text content styling within collapsible areas for better readability */
+.S2-CardDetail p,
+.S2-CardDetail ul {
+  font-size: 0.9rem; /* Adjusting font size */
+}
+
+/* Optional: If list items need specific styling */
+.S2-CardDetail ul li {
+  margin-bottom: 5px; /* Adding space between list items */
+}
+
+/* Adjust Opa School Teacher image size within S2 */
+.S2-TeacherImage {
+  width: 50%; /* Example, adjust according to your layout needs */
+  max-width: 100px; /* Maximum width to control the image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@keyframes S2-slideInFromLeft {
+  from {
+    transform: translateX(-100%);
   }
-  50% {
-    transform: translateY(-10px);
+  to {
+    transform: translateX(0);
   }
 }
 
-/* CSS */
-.S2-FeatureCard {
-  background-repeat: no-repeat;
-  background-size: 100% 300%;
+@keyframes S2-slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.S2-FeatureCard:nth-child(1) {
-  background-position: 0% 0%;
+.S2-LeftComponent {
+  animation: 0.5s ease-out 0s 1 S2-slideInFromLeft;
 }
 
-.S2-FeatureCard:nth-child(2) {
-  background-position: 0% 50%;
-}
-
-.S2-FeatureCard:nth-child(3) {
-  background-position: 0% 100%;
+.S2-RightComponent {
+  animation: 0.5s ease-out 0s 1 S2-slideInFromRight;
 }
 
 /*******************************************

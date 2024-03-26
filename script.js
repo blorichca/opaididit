@@ -1,27 +1,19 @@
 // S2
 
-$(function () {
-  // Dynamically set the overlay content for each feature card
-  $(".S2-FeatureCard .info-icon").each(function (index) {
-    // Get the corresponding info data for the card
-    var infoData = aiChatbotsInfo[index];
-    var overlayContent = infoData.bulletPoints
-      .map(function (bp) {
-        return "<strong>" + bp.text + "</strong>: " + bp.description;
-      })
-      .join("<br>");
-
-    // Insert the constructed overlay content into the overlay
-    $(this).siblings(".overlay").html(overlayContent);
-  });
-
-  // Show the overlay when hovering over the info icon
-  $(".S2-FeatureCard .info-icon").hover(
+$(document).ready(function () {
+  $(".S2-InfoIcon").hover(
     function () {
-      $(this).siblings(".overlay").fadeIn(500);
+      // On hover, show the collapse
+      var targetId = $(this).attr("href");
+      $(targetId).collapse("show");
     },
     function () {
-      $(this).siblings(".overlay").fadeOut(500);
+      // On unhover, hide the collapse
+      var targetId = $(this).attr("href");
+      setTimeout(function () {
+        // Add a slight delay to improve usability
+        $(targetId).collapse("hide");
+      }, 300); // Delay in milliseconds
     }
   );
 });
