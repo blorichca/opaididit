@@ -1,18 +1,27 @@
 // S2
 
-// If you want to add any interactive JavaScript behavior
-$(document).ready(function () {
-  // Code to handle the hover event on the info icon
-  $(".info-icon").hover(
+$(function () {
+  // Dynamically set the overlay content for each feature card
+  $(".S2-FeatureCard .info-icon").each(function (index) {
+    // Get the corresponding info data for the card
+    var infoData = aiChatbotsInfo[index];
+    var overlayContent = infoData.bulletPoints
+      .map(function (bp) {
+        return "<strong>" + bp.text + "</strong>: " + bp.description;
+      })
+      .join("<br>");
+
+    // Insert the constructed overlay content into the overlay
+    $(this).siblings(".overlay").html(overlayContent);
+  });
+
+  // Show the overlay when hovering over the info icon
+  $(".S2-FeatureCard .info-icon").hover(
     function () {
-      // Mouse enter function
-      $(this).siblings(".original-content").hide();
-      $(this).siblings(".overlay-content").show();
+      $(this).siblings(".overlay").fadeIn(500);
     },
     function () {
-      // Mouse leave function
-      $(this).siblings(".original-content").show();
-      $(this).siblings(".overlay-content").hide();
+      $(this).siblings(".overlay").fadeOut(500);
     }
   );
 });

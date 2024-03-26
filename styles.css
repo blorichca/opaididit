@@ -38,26 +38,90 @@ body {
 * - S2 - AI                               *
 *                                         *
 *******************************************/
-/* Card with overlay CSS */
+
+#S2-AI {
+  position: relative;
+}
+
 .S2-FeatureCard {
-  background-size: cover;
+  background-color: transparent; /* Make the cards transparent */
+  background-size: contain; /* Ensure the entire image is visible */
   background-repeat: no-repeat;
-  opacity: 0.9; /* Adjust transparency */
-  transition: opacity 0.5s; /* Smooth transition for hover effect */
-  /* Other styles as needed */
+  background-position: center; /* Center the image */
+  opacity: 0.5; /* Adjust transparency */
+  transition: opacity 0.5s ease; /* Add transition for smooth effect */
 }
 
-.S2-FeatureCard:hover .original-content {
-  display: none; /* Hide the original content when hovering */
+.S2-FeatureCard .card-body {
+  position: relative;
+  font-size: 1.5em; /* Adjust this value to make the icon bigger or smaller */
 }
 
-.S2-FeatureCard:hover .overlay-content {
-  display: flex; /* Show overlay content when hovering */
+.S2-FeatureCard .list-unstyled {
+  text-align: left;
+  padding: 0;
 }
 
-.S2-FeatureCard .info-icon:hover {
-  transform: scale(1.1); /* Enlarge the icon a bit when hovering */
-  transition: transform 0.3s; /* Smooth icon scaling */
+.S2-FeatureCard .info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
+}
+
+.S2-FeatureCard .overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.965);
+  color: white;
+  padding: 20px;
+  overflow: auto;
+}
+
+.S2-FeatureCard:hover .info-icon {
+  animation: jump 0.5s ease;
+  font-size: 2em; /* Adjust this value to make the icon bigger or smaller */
+}
+
+@media (min-width: 476px) {
+  .S2-FeatureCard:hover .info-icon {
+    font-size: 1em; /* Adjust this value to make the icon bigger or smaller */
+  }
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.S2-FeatureCard.card:nth-child(1) {
+  background-image: url("img/ai_bot_opa_right_1.png");
+  background-position: top;
+  background-size: 100% 202px; /* Adjust this value based on your needs */
+}
+
+.S2-FeatureCard.card:nth-child(2) {
+  background-image: url("img/ai_bot_opa_right_2.png");
+  background-position: center;
+  background-size: 100% 472px; /* Adjust this value based on your needs */
+}
+
+.S2-FeatureCard.card:nth-child(3) {
+  background-image: url("img/ai_bot_opa_right_3.png");
+  background-position: bottom;
+  background-size: 100% 406px; /* Adjust this value based on your needs */
 }
 
 /*******************************************
