@@ -1,80 +1,21 @@
-// S2
+// script.js
+
+// S2 - info overlay
 
 $(document).ready(function () {
-  $(".S2-InfoIcon").hover(
+  $(".S2-FolderStructure").hover(
     function () {
       // On hover, show the collapse
-      var targetId = $(this).attr("href");
-      $(targetId).collapse("show");
+      var targetId = $(this).find(".S2-CardDetail").attr("id");
+      $("#" + targetId).collapse("show");
     },
     function () {
       // On unhover, hide the collapse
-      var targetId = $(this).attr("href");
-      setTimeout(function () {
-        // Add a slight delay to improve usability
-        $(targetId).collapse("hide");
-      }, 300); // Delay in milliseconds
+      var targetId = $(this).find(".S2-CardDetail").attr("id");
+      $("#" + targetId).collapse("hide");
     }
   );
 });
-
-const aiChatbotsInfo = [
-  {
-    title: "What are AI Chatbots?",
-    bulletPoints: [
-      {
-        text: "User-AI interaction platforms",
-        description:
-          "Chatbots let you communicate directly with powerful AI models.",
-      },
-    ],
-  },
-  {
-    title: "What makes them so special?",
-    bulletPoints: [
-      {
-        text: "Get You, Really Get You",
-        description:
-          "They use advanced language processing to understand your intent and natural way of speaking.",
-      },
-      {
-        text: "Information Powerhouses",
-        description:
-          "AI chatbots are trained on massive datasets, giving them access to a vast range of knowledge.",
-      },
-      {
-        text: "Helpful for Everyone",
-        description:
-          "Their responses adapt to your knowledge level, whether you're a beginner or an expert.",
-      },
-      {
-        text: "Constantly Learning",
-        description:
-          "Each interaction helps them improve, making them progressively smarter.",
-      },
-    ],
-  },
-  {
-    title: "What can they do?",
-    bulletPoints: [
-      {
-        text: "Got Your Legal Back",
-        description:
-          "Analyze contracts and legal documents, simplifying complex language.",
-      },
-      {
-        text: "Physical & Mental Trainer",
-        description:
-          "Provide workout guidance, exercise advice, and mental health support.",
-      },
-      {
-        text: "Financial Advisor",
-        description:
-          "Help you discover financial tools, compare your options, and make sound money choices.",
-      },
-    ],
-  },
-];
 
 // S3 Bots - Dyna,mic creation of bot cards
 
@@ -119,7 +60,7 @@ const bots = [
   },
 ];
 
-const botsContainer = document.querySelector("#bots .row");
+const botsContainer = document.querySelector("#S3-bots .row");
 
 bots.forEach((bot) => {
   const botDiv = document.createElement("div");

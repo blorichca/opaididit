@@ -1,42 +1,82 @@
 /* styles.css */
 
 :root {
-  --primary-color: rgb(9, 17, 243);
+  --primary-color: #0911f3;
   --secondary-color: rgba(128, 0, 128, 0.971);
 }
 
 /* General */
-body {
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   font-size: 12px; /* Default font size */
   font-family: "Arial", sans-serif;
 }
 
-/* Navbar Styles */
+/* Remove padding from the containers */
+.container-fluid,
+.container .navbar,
+main,
+footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure full width for rows */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*******************************************
+ * S0 - Navbar
+ *******************************************/
 .navbar {
-  margin-bottom: 20px; /* Creates space between navbar and content */
+  background-color: #000; /* Black background */
+  border: none;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important; /* White text */
+}
+
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Ensure navbar-collapse items are also styled correctly */
+.navbar-collapse {
+  background-color: #000; /* Black background */
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
 }
 
 /*******************************************
  * S1 - Quote by Opa Styling
  * Enhanced Design with Larger Quotation Marks
- *******************************************/
 
-/* Container styling */
+
+/* Original Container styling */
 #S1-QuoteByOpa {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  ); /* Gradient background */
+  background: linear-gradient(135deg, gray, gray);
   padding: 1em; /* Reduced padding to shorten height */
-  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 2em 0;
   color: white;
   position: relative;
   animation: slide-in 0.5s ease-out; /* Corrected animation name */
+  text-align: center;
+  display: flex; /* Added for centering */
+  justify-content: center; /* Added for centering */
+  align-items: center; /* Added for centering */
 }
-
 /* Blockquote styling */
 #S1-QuoteByOpa blockquote {
   font-style: italic;
@@ -46,6 +86,8 @@ body {
   padding: 0 1em 0 4em; /* Adjusted padding */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
+  display: inline-block; /* Keep your original display style */
+  max-width: none; /* Ensure blockquote is not constrained */
 }
 
 /* Styling for opening and closing quotation marks */
@@ -110,11 +152,14 @@ body {
 *                                         *
 *******************************************/
 
-/* S2 Section: Teacher Image Styling */
-.S2-TeacherImage {
-  width: 100%; /* Adjust width as needed */
-  max-height: 400px; /* Example size, adjust as needed for responsiveness */
-  height: auto; /* Maintain aspect ratio */
+#S2-AI {
+  background: url("img/opa_classroom.png") no-repeat center center;
+  background-size: 100% auto; /* This will stretch the background image to 100% of the container width */
+  height: 470px; /* Adjust this value based on your content or desired view */
+  display: flex;
+  align-items: center; /* This vertically centers your content in the section if needed */
+  justify-content: center; /* This horizontally centers your content in the section if needed */
+  background-position: right top; /* Cut the top of the image */
 }
 
 /* Folder structure styling for background, shadow, and hover effects */
@@ -125,6 +170,11 @@ body {
   margin-bottom: 15px; /* Space between each folder */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interaction */
+  /* Apply white borders, white text, and transparent background */
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  animation: 1.2s ease-out forwards S2-slideInFromRight;
 }
 
 /* Hover effect for folders to lift and cast a larger shadow */
@@ -148,24 +198,6 @@ body {
   align-items: center;
 }
 
-/* Info icon styling, including hover effects for transformation and color change */
-.S2-InfoIcon {
-  margin-left: 10px; /* Spacing from title text */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth effect transitions */
-  display: inline-block; /* Allows for transform effect */
-  color: var(--primary-color);
-}
-
-/* Enlarging the icon significantly when the card is hovered */
-.S2-FolderStructure:hover .S2-InfoIcon {
-  transform: scale(2); /* Scale effect for emphasis */
-}
-
-/* Changing icon color upon direct hover */
-.S2-InfoIcon:hover {
-  color: var(--secondary-color); /* Highlight color for interaction */
-}
-
 /* Content styling within card details */
 .S2-CardDetail {
   border: 1px solid #ddd; /* Content area border */
@@ -181,22 +213,43 @@ body {
   }
 }
 
-@keyframes S2-slideInFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-/* Applying animations to left and right components of the S2 section */
-.S2-LeftComponent {
-  animation: 1s ease-out forwards S2-slideInFromLeft;
-}
-
 .S2-RightComponent {
   animation: 1.2s ease-out forwards S2-slideInFromRight;
+}
+
+.S2-RightComponent .S2-FolderStructure {
+  /* Move to the right side and ensure full width */
+  width: 500px;
+}
+
+.S2-RightComponent .S2-QuestionItem {
+  /* Add white borders, white text, and a transparent background */
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Lock the width to prevent size change */
+  width: fixed_value; /* Replace fixed_value with the width you want */
+}
+
+/* Adjust the S2 folders to be a bit narrower */
+.S2-RightComponent {
+  padding: 0 15px; /* Adjust padding as needed */
+}
+
+/* Small screens adjustments */
+@media (max-width: 768px) {
+  .S2-RightComponent {
+    margin-top: 20px; /* Pushes the component down */
+    background-color: #000; /* Sets the background to black */
+    color: #fff; /* Optional: Changes text color to white for better contrast */
+    padding-top: 10px; /* Adds some space at the top inside the folder */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+  }
+
+  .S2-RightComponent .S2-QuestionTitle,
+  .S2-RightComponent .collapse {
+    color: #fff; /* Ensures text within the component is also white */
+  }
 }
 
 /*******************************************
@@ -205,22 +258,31 @@ body {
  *                                         *
  *******************************************/
 
-#bots .row {
-  display: flex;
-  flex-wrap: wrap;
+#S3-bots {
+  background: url("img/opa_blue_white_my_flag.png") no-repeat center center;
+  background-size: cover; /* This will cover the entire S3 section with the background image */
+  min-height: 500px; /* Adjust this value based on your content or desired view */
+  width: 100%;
+  background-position: left bottom; /* Cut the top of the image */
 }
 
-#bots .row > div {
+#S3-bots .row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+}
+
+#S3-bots .row > div {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-#bots .row > div > * {
+#S3-bots .row > div > * {
   flex-grow: 1;
 }
 
-#bots img {
+#S3-bots img {
   width: 100px; /* Adjust as needed */
   height: 100px; /* Adjust as needed */
   object-fit: contain; /* To maintain aspect ratio */
@@ -263,7 +325,6 @@ body {
  *******************************************/
 .footer {
   background-color: #f5f5f5; /* Light grey background */
-  padding: 20px 0; /* Padding for top and bottom */
   text-align: center; /* Centers the footer content */
 }
 
