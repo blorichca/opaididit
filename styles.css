@@ -1,5 +1,10 @@
 /* styles.css */
 
+:root {
+  --primary-color: rgb(9, 17, 243);
+  --secondary-color: rgba(128, 0, 128, 0.971);
+}
+
 /* General */
 body {
   font-size: 12px; /* Default font size */
@@ -20,8 +25,8 @@ body {
 #S1-QuoteByOpa {
   background: linear-gradient(
     135deg,
-    #6e8efb,
-    #a777e3
+    var(--primary-color),
+    var(--secondary-color)
   ); /* Gradient background */
   padding: 1em; /* Reduced padding to shorten height */
   border-radius: 8px;
@@ -108,7 +113,7 @@ body {
 /* S2 Section: Teacher Image Styling */
 .S2-TeacherImage {
   width: 100%; /* Adjust width as needed */
-  max-width: 200px; /* Example size, adjust as needed for responsiveness */
+  max-height: 400px; /* Example size, adjust as needed for responsiveness */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -148,7 +153,7 @@ body {
   margin-left: 10px; /* Spacing from title text */
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth effect transitions */
   display: inline-block; /* Allows for transform effect */
-  color: #000; /* Default icon color */
+  color: var(--primary-color);
 }
 
 /* Enlarging the icon significantly when the card is hovered */
@@ -158,7 +163,7 @@ body {
 
 /* Changing icon color upon direct hover */
 .S2-InfoIcon:hover {
-  color: #007bff; /* Highlight color for interaction */
+  color: var(--secondary-color); /* Highlight color for interaction */
 }
 
 /* Content styling within card details */
@@ -232,13 +237,13 @@ body {
 }
 
 .S5-Donations-title {
-  color: #333;
+  color: var(--primary-color);
   font-size: 1.5rem; /* Responsive font size */
   margin-bottom: 0.5rem;
 }
 
 .S5-Donations-text {
-  color: #666;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 
