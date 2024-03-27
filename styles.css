@@ -6,31 +6,9 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -20rem 0;
-  }
-  100% {
-    background-position: 20rem 0;
-  }
-}
-
-.shimmer {
-  animation: shimmer 2s infinite linear;
-  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
-  background-size: 20rem 100%;
-}
-
 /* Navbar Styles */
 .navbar {
   margin-bottom: 20px; /* Creates space between navbar and content */
-}
-
-/* Footer Styles */
-.footer {
-  background-color: #f5f5f5; /* Light grey background */
-  padding: 20px 0; /* Padding for top and bottom */
-  text-align: center; /* Centers the footer content */
 }
 
 /*******************************************
@@ -123,100 +101,71 @@ body {
 
 /*******************************************
 *                                         *
-* - S2 - AI                               *
+* - S2 - AIntro                           *
 *                                         *
 *******************************************/
 
-/* Styling for the folder structure and question items */
-.S2-FolderStructure .S2-QuestionItem {
-  background: #f0f0f0; /* Light grey background for question items */
-  cursor: pointer; /* Cursor changes to pointer to indicate clickable */
-  margin-bottom: 5px; /* Space between question items */
-}
-
-/* Styling for the titles of the questions within folders */
-.S2-FolderStructure .S2-QuestionTitle {
-  padding: 10px; /* Padding around the title for spacing */
-  font-weight: bold; /* Bold font for emphasis */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out items within */
-  align-items: center; /* Align items vertically */
-}
-
-/* Styling for the detailed content within the collapsible areas */
-.S2-FolderStructure .S2-CardDetail {
-  background: #ffffff; /* White background for the details area */
-  border: 1px solid #ddd; /* Light grey border for distinction */
-}
-
-/* Base styles for the info icon, including positioning and basic interaction effects */
-.S2-InfoIcon {
-  margin-left: 10px; /* Keep the icon spaced from the text */
-  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease; /* Smooth transitions for effects, including color change */
-  font-size: 16px; /* Starting font size */
-  display: inline-block; /* Necessary for transformations */
-  color: #000; /* Initial color - change as needed */
-}
-
-/* Transparency adjustment specifically for images within the card detail */
-.S2-CardDetail img {
-  background-size: cover; /* Ensure it covers the full area */
-  opacity: 0.5; /* Adjust for desired transparency */
-}
-
-/* Styling for folders with hover effect */
-.S2-FolderStructure {
-  background: #eeeeee; /* Light grey background */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside folders */
-  margin-bottom: 15px; /* Space between folders */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-  max-height: 150px; /* Control the height of the folder */
-  overflow: hidden; /* Hide overflow to maintain the design integrity */
-}
-
-.S2-FolderStructure:hover {
-  transform: translateY(-10px); /* Moves the folder up slightly on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow to simulate "lifting" */
-}
-
-/* Style for question title and content readability */
-.S2-QuestionTitle {
-  font-weight: bold; /* Ensuring titles are bold */
-  cursor: pointer; /* Indicating clickability */
-  font-size: 1.7em;
-}
-
-/* Text content styling within collapsible areas for better readability */
-.S2-CardDetail p,
-.S2-CardDetail ul {
-  font-size: 0.9rem; /* Adjusting font size */
-}
-
-/* Optional: If list items need specific styling */
-.S2-CardDetail ul li {
-  margin-bottom: 5px; /* Adding space between list items */
-}
-
-/* Adjust Opa School Teacher image size within S2 */
+/* S2 Section: Teacher Image Styling */
 .S2-TeacherImage {
-  width: 75%; /* Example, adjust according to your layout needs */
-  max-width: 100px; /* Maximum width to control the image size */
+  width: 100%; /* Adjust width as needed */
+  max-width: 200px; /* Example size, adjust as needed for responsiveness */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Hover effect on the question item to animate the info icon */
-.S2-QuestionItem:hover .S2-InfoIcon {
-  transform: translateY(-5px) scale(1.5); /* Jumping effect: moves up and enlarges */
-  font-size: 24px; /* Increases size for activation effect */
+/* Folder structure styling for background, shadow, and hover effects */
+.S2-FolderStructure {
+  background: #eeeeee; /* Light grey background for folders */
+  border-radius: 10px; /* Smoothed corners */
+  padding: 20px; /* Inner spacing */
+  margin-bottom: 15px; /* Space between each folder */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interaction */
 }
 
-/* Direct hover effect over the icon for color change */
+/* Hover effect for folders to lift and cast a larger shadow */
+.S2-FolderStructure:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Styling for each question item within folders */
+.S2-QuestionItem {
+  margin-bottom: 5px; /* Spacing between items */
+}
+
+/* Question title styling, making it bold and aligned */
+.S2-QuestionTitle {
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Info icon styling, including hover effects for transformation and color change */
+.S2-InfoIcon {
+  margin-left: 10px; /* Spacing from title text */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth effect transitions */
+  display: inline-block; /* Allows for transform effect */
+  color: #000; /* Default icon color */
+}
+
+/* Enlarging the icon significantly when the card is hovered */
+.S2-FolderStructure:hover .S2-InfoIcon {
+  transform: scale(1.5); /* Scale effect for emphasis */
+}
+
+/* Changing icon color upon direct hover */
 .S2-InfoIcon:hover {
-  color: #007bff; /* This ensures the color changes even when directly hovering over the icon */
+  color: #007bff; /* Highlight color for interaction */
 }
 
+/* Content styling within card details */
+.S2-CardDetail {
+  border: 1px solid #ddd; /* Content area border */
+}
+
+/* Animations for the S2 section components' entrance */
 @keyframes S2-slideInFromLeft {
   from {
     transform: translateX(-100%);
@@ -235,45 +184,17 @@ body {
   }
 }
 
+/* Applying animations to left and right components of the S2 section */
 .S2-LeftComponent {
-  animation: 0.5s ease-out 0s 1 S2-slideInFromLeft;
+  animation: 0.5s ease-out forwards S2-slideInFromLeft;
 }
 
 .S2-RightComponent {
-  animation: 0.5s ease-out 0s 1 S2-slideInFromRight;
+  animation: 0.5s ease-out forwards S2-slideInFromRight;
 }
 
 /*******************************************
- *                                         *
- * - S3 - Bots          *
- *                                         *
- *******************************************/
-
-#bots .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#bots .row > div {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-#bots .row > div > * {
-  flex-grow: 1;
-}
-
-#bots img {
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  object-fit: contain; /* To maintain aspect ratio */
-}
-
-/*******************************************
- *                                         *
- * - S5 Donations Section Styles           *
- *                                         *
+\ * - S5 Donations Section Styles           *
  *******************************************/
 
 #S5-Donations {
@@ -302,4 +223,34 @@ body {
   .S5-Donations-title {
     font-size: 2rem; /* Larger font size on small devices and up */
   }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Centers the footer content */
+}
+
+/*******************************************
+\ * - Grabadge?       *
+ *******************************************/
+
+@keyframes shimmer {
+  0% {
+    background-position: -20rem 0;
+  }
+  100% {
+    background-position: 20rem 0;
+  }
+}
+
+/*******************************************
+\ * - Footer        *
+ *******************************************/
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 20rem 100%;
 }
