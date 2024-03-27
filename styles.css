@@ -149,9 +149,13 @@ body {
   border: 1px solid #ddd; /* Light grey border for distinction */
 }
 
-/* Adjustments for the positioning of the info icon */
+/* Base styles for the info icon, including positioning and basic interaction effects */
 .S2-InfoIcon {
-  margin-left: 10px; /* Space from the text to the icon */
+  margin-left: 10px; /* Keep the icon spaced from the text */
+  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease; /* Smooth transitions for effects, including color change */
+  font-size: 16px; /* Starting font size */
+  display: inline-block; /* Necessary for transformations */
+  color: #000; /* Initial color - change as needed */
 }
 
 /* Transparency adjustment specifically for images within the card detail */
@@ -197,9 +201,20 @@ body {
 
 /* Adjust Opa School Teacher image size within S2 */
 .S2-TeacherImage {
-  width: 50%; /* Example, adjust according to your layout needs */
+  width: 75%; /* Example, adjust according to your layout needs */
   max-width: 100px; /* Maximum width to control the image size */
   height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect on the question item to animate the info icon */
+.S2-QuestionItem:hover .S2-InfoIcon {
+  transform: translateY(-5px) scale(1.5); /* Jumping effect: moves up and enlarges */
+  font-size: 24px; /* Increases size for activation effect */
+}
+
+/* Direct hover effect over the icon for color change */
+.S2-InfoIcon:hover {
+  color: #007bff; /* This ensures the color changes even when directly hovering over the icon */
 }
 
 @keyframes S2-slideInFromLeft {
