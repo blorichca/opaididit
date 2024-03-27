@@ -3,6 +3,7 @@
 :root {
   --primary-color: #0911f3;
   --secondary-color: rgba(128, 0, 128, 0.971);
+  --navbar-height: 70px; /* Define the height variable */
 }
 
 /* General */
@@ -36,6 +37,7 @@ footer {
 .navbar {
   background-color: #000; /* Black background */
   border: none;
+  height: var(--navbar-height); /* Use the height variable */
 }
 
 .navbar-brand,
@@ -59,10 +61,16 @@ footer {
   color: #fff;
 }
 
+.navbar-spacer {
+  height: var(
+    --navbar-height
+  ); /* Adjust to match the actual height of your navbar */
+}
+
 /*******************************************
  * S1 - Quote by Opa Styling
  * Enhanced Design with Larger Quotation Marks
-
+ /*******************************************
 
 /* Original Container styling */
 #S1-QuoteByOpa {
