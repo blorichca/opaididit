@@ -11,7 +11,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  width: 100%;
   font-size: 12px; /* Default font size */
   font-family: "Arial", sans-serif;
 }
@@ -164,99 +163,52 @@ footer {
   background: url("img/opa_classroom.png") no-repeat center center;
   background-size: 100% auto; /* This will stretch the background image to 100% of the container width */
   height: 470px; /* Adjust this value based on your content or desired view */
-  display: flex;
-  align-items: center; /* This vertically centers your content in the section if needed */
-  justify-content: center; /* This horizontally centers your content in the section if needed */
   background-position: right top; /* Cut the top of the image */
 }
 
-/* Folder structure styling for background, shadow, and hover effects */
-.S2-FolderStructure {
-  background: #eeeeee; /* Light grey background for folders */
-  border-radius: 10px; /* Smoothed corners */
-  padding: 10px; /* Reduced inner spacing */
-  margin-bottom: 15px; /* Space between each folder */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interaction */
-  /* Apply white borders, white text, and transparent background */
-  border: 1px solid white;
-  color: white;
-  background-color: transparent;
-  animation: 1.2s ease-out forwards S2-slideInFromRight;
+/* S2 Section Accordion Styling */
+#S2-AI .card {
+  background: none; /* Adjust if you have a specific background for cards */
+  border: none; /* Removes border from cards */
 }
 
-/* Hover effect for folders to lift and cast a larger shadow */
-.S2-FolderStructure:hover {
-  transform: translateY(-10px); /* Lift effect */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+#S2-AI .card-header {
+  background: none; /* Transparent header to see the background image */
+  border-bottom: none; /* Removes border line below the header */
 }
 
-/* Styling for each question item within folders */
-.S2-QuestionItem {
-  margin-bottom: 5px; /* Spacing between items */
+#S2-AI .btn-link {
+  color: #ffffff; /* Sets the color of the accordion buttons, adjust as needed */
+  text-decoration: none; /* Removes underline from links */
 }
 
-/* Question title styling, making it bold and aligned */
-.S2-QuestionTitle {
-  padding: 10px;
-  font-weight: bold;
-  font-size: 1.7em; /* Increased font size */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#S2-AI .btn-link:hover,
+#S2-AI .btn-link:focus {
+  color: #cccccc; /* Color for hover and focus states, adjust as needed */
+  text-decoration: none; /* Ensures no underline on hover/focus */
 }
 
-/* Content styling within card details */
-.S2-CardDetail {
-  border: 1px solid #ddd; /* Content area border */
+#S2-AI .collapse.show {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent background for the content area, adjust as needed */
 }
 
-/* Animations for the S2 section components' entrance */
-@keyframes S2-slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+#S2-AI .card-body {
+  color: #000000; /* Text color for the content, adjust as needed */
 }
 
-.S2-RightComponent {
-  animation: 1.2s ease-out forwards S2-slideInFromRight;
-}
-
-.S2-RightComponent .S2-FolderStructure {
-  /* Move to the right side and ensure full width */
-  width: 500px;
-}
-
-.S2-RightComponent .S2-QuestionItem {
-  /* Add white borders, white text, and a transparent background */
-  border: 1px solid white;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
-  /* Lock the width to prevent size change */
-  width: fixed_value; /* Replace fixed_value with the width you want */
-}
-
-/* Adjust the S2 folders to be a bit narrower */
-.S2-RightComponent {
-  padding: 0 15px; /* Adjust padding as needed */
-}
-
-/* Small screens adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .S2-RightComponent {
-    margin-top: 20px; /* Pushes the component down */
-    background-color: #000; /* Sets the background to black */
-    color: #fff; /* Optional: Changes text color to white for better contrast */
-    padding-top: 10px; /* Adds some space at the top inside the folder */
-    border-radius: 5px; /* Optional: Adds rounded corners */
+  #S2-AI .btn-link {
+    font-size: 14px; /* Smaller text on small screens, adjust as needed */
   }
 
-  .S2-RightComponent .S2-QuestionTitle,
-  .S2-RightComponent .collapse {
-    color: #fff; /* Ensures text within the component is also white */
+  #S2-AI .card-body {
+    font-size: 12px; /* Smaller text on small screens, adjust as needed */
   }
 }
 
@@ -281,7 +233,7 @@ footer {
 }
 
 #S3-bots .row > div {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
 }

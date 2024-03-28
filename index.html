@@ -44,7 +44,7 @@
   
   <!-- main Start -->
   <main>
-    <div class="container">
+    <div  class="container-fluid">
 
      <!-- S1 Quote by Opa - start -->
     <div id="S1-QuoteByOpa" class="row">
@@ -59,61 +59,97 @@
     <!-- S1 Quote by Opa - end -->
 
 
-    
+    <!-- S2-AI Intro - Start -->
+<div id="S2-AI"  class="container-fluid">
+  <!-- Accordion wrapper -->
+  <div id="S2-Accordion" class="accordion">
 
-<!-- S2 AI Intro  - Start -->
-<div id="S2-AI" class="container">
-  <div class="row">
-    <!-- Folders on the Right -->
-    <div class="col-md-3 offset-md-9 S2-RightComponent">
-      <!-- Folder 2 -->
-      <div class="S2-FolderStructure">
-        <div class="S2-QuestionItem">
-          <div class="S2-QuestionTitle">
-            What are AI Chatbots? 
-          </div>
-          <div class="collapse S2-CardDetail" id="S2-Card2Details" >
-            AI chatbots are kinda like these Siri/Alexa (smart assitants), but actually smart. When you ask to ‘Play Taylor Swift,’ they won’t reply with ‘Calling Mom.’ They really get you.
-          </br>
-            These are the main 4 AI elements of them.
-            <ul>
-              <li><strong>They understand you best:</strong> They use advanced language processing to understand your intent and natural way of speaking.</li>
-              <li><strong>Information Powerhouses:</strong> AI chatbots are trained on massive datasets, giving them access to a vast range of knowledge.</li>
-              <li><strong>Helpful for Everyone:</strong> Their responses adapt to your knowledge level, whether you're a beginner or an expert.</li>
-              <li><strong>Constantly Learning:</strong> Each interaction helps them improve, making them progressively smarter.</li>
-            </ul>
-          </div>
-        </div>
+    <!-- Accordion item for the first question -->
+    <div class="card">
+      <div class="card-header" id="S2-HeadingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#S2-CollapseOne" aria-expanded="true" aria-controls="S2-CollapseOne">
+            What are AI Chatbots?
+          </button>
+        </h5>
       </div>
-      
-      <!-- Folder 3 -->
-      <div class="S2-FolderStructure">
-        <div class="S2-QuestionItem">
-          <div class="S2-QuestionTitle">
-            What can they do?
-          </div>
-          <div class="collapse S2-CardDetail" id="S2-Card3Details" >
-            <ul>
-              <li><strong>Got Your Legal Back:</strong> Analyze contracts and legal documents, simplifying complex language.</li>
-              <li><strong>Physical & Mental Trainer:</strong> Provide workout guidance, exercise advice, and mental health support.</li>
-              <li><strong>Financial Advisor:</strong> Help you discover financial tools, compare your options, and make sound money choices.</li>
-            </ul>
-          </div>
+      <div id="S2-CollapseOne" class="collapse" aria-labelledby="S2-HeadingOne" data-parent="#S2-Accordion">
+        <div class="card-body">
+          Content for the first question goes here 
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- S2 AI Intro Modified - End -->
-
-      <!-- S3 Bots - start -->
-      <div id="S3-bots" class="p-3">
-        <div class="row g-0 p-2">
-          <!-- Bots will be inserted here -->
+    <!-- Accordion item for the second question -->
+    <div class="card">
+      <div class="card-header" id="S2-HeadingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#S2-CollapseTwo" aria-expanded="false" aria-controls="S2-CollapseTwo">
+            What can they do?
+          </button>
+        </h5>
+      </div>
+      <div id="S2-CollapseTwo" class="collapse" aria-labelledby="S2-HeadingTwo" data-parent="#S2-Accordion">
+        <div class="card-body">
+          Content for the second question goes here 
         </div>
       </div>
-      <!-- S3 Bots - end -->
+    </div>
+
+  </div>
+</div>
+<!-- S2-AI Intro - End -->
+
+<!-- index.html -->
+<div id="S3-bots" class="p-3 container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Copilot</th>
+        <th>Gemini</th>
+        <th>ChatGPT</th>
+      </tr>
+    </thead>
+    <tbody class="row g-0 p-2">
+      <tr>
+        <td>
+          <a href="https://copilot.microsoft.com/">
+            <img src="img/bot-copilot-icon.png" alt="mico icon" class="img-fluid" style="max-width: 150px;">
+          </a><br>
+          By Microsoft<br>
+          FREE: Image creation 3<br>
+          FREE: Internet Access<br>
+          FREE: Plugins<br>
+          FREE: Chat Styles<br>
+          FREE: Notebook<br>
+          PAID: Custom bots
+        </td>
+        <td>
+          <a href="https://gemini.google.com/app">
+            <img src="img/bot-gemini-icon.png" alt="google icon" class="img-fluid" style="max-width: 150px;">
+          </a><br>
+          By Google<br>
+          FREE: Image creation 2<br>
+          FREE: Internet Access<br>
+          FREE: Plugins<br>
+          PAID: Advanced
+        </td>
+        <td>
+          <a href="https://chat.openai.com/">
+            <img src="img/bot-chatgpt-icon.png" alt="chatGPT icon" class="img-fluid" style="max-width: 150px;">
+          </a><br>
+          By Open AI<br>
+          FREE: Personal Contex<br>
+          PAID: Image creation 1<br>
+          PAID: Internet Access<br>
+          PAID: Plugins<br>
+          PAID: Custom bots
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 
 
@@ -122,7 +158,7 @@
       <!-- S4 Favs - end -->
 
       <!-- S5 Donations - start -->
-      <div id="S5-Donations" class="container">
+      <div id="S5-Donations"  class="container-fluid">
         <div class="row align-items-center">
           <!-- PayPal Mascot Image -->
           <div class="col-sm-5 mb-3 mb-sm-0">
@@ -152,7 +188,7 @@
 
   <!-- Footer Start -->
   <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
+    <div  class="container-fluid">
       <span class="text-muted">Optionalista.com</span>
     </div>
   </footer>
