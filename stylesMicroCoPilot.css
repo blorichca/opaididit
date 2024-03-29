@@ -1,0 +1,56 @@
+:root {
+  --primary-color: #007bff; /* Primary color - Blue */
+  --secondary-color: #ffc107; /* Secondary color - Yellow-orange */
+  --navbar-height: 56px; /* Navbar height - also use to define empty div below navbar to offset stickiness */
+}
+
+body {
+  padding-top: var(--navbar-height);
+}
+
+/* S0-Navbar styling - start */
+.navbar {
+  background-color: black;
+}
+.navbar .nav-link {
+  color: var(--secondary-color);
+}
+/* S0-Navbar styling - end */
+
+/* S1-Quote styling - start */
+#S1-Quote {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-color)
+  );
+}
+
+#S1-Quote .display-1 {
+  font-size: 5rem;
+}
+
+@media (max-width: 576px) {
+  #S1-Quote .display-1 {
+    font-size: 2rem;
+  }
+
+  #S1-Quote .blockquote p {
+    font-size: 1.2rem;
+  }
+
+  #S1-Quote .blockquote-footer {
+    font-size: 1rem;
+  }
+}
+/* S1-Quote styling - end */
+
+/* S99-Footer styling - start */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.footer a {
+  color: var(--primary-color);
+}
+/* S99-Footer styling - end */

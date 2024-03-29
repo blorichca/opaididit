@@ -1,0 +1,152 @@
+# Opa! Hi AI! Website design
+
+## Important
+
+- in order to stay in the Firebase free plan tier we need to avoid any server side interaction.
+- include bootstrap 5 urls and other external needed sources
+- pay attention to naming standrads
+
+## :root
+
+--primary-color: #007bff; /_ Primary color - Blue _/
+--secondary-color: #ffc107; /_ Secondary color - Yellow-orange _/
+--navbar-height: 56px; /_ Navbar height - also use to define empty div below navbar to offset stickiness _/
+
+## main files
+
+.
+├── 404.html
+├── img
+│ ├── bot-chatgpt-icon.png
+│ ├── bot-copilot-icon.png
+│ ├── bot-gemini-icon.png
+│ ├── favicon.ico
+│ ├── opa_blue_white_my_flag.png
+│ ├── opa_classroom.png
+│ ├── opapaypal.png
+├── index.html
+├── script.js
+├── styles.css
+
+## Styling Notes
+
+- The design should be mobile-responsive
+- Utilize the Bootstrap framework for components and grid layout
+- The main font style for headings and text should be consistent with the brand
+
+## Technical Specifications
+
+- Ensure SEO-friendly markup and practices
+- Prioritize performance and loading times
+- Keep code easy to understand and maintain by following standard (see below)
+
+## Standard & naming convention
+
+- segment id: “S#”
+  - e.g. S0, S1…
+- segment code: “S#-<Segment short name>”
+  - e.g S1-Quote
+- css class names: “<segment code>-<class name>”
+  - e.g S5-Donations-title
+    – css segment start comment:
+    /************************\*************************/
+    /**\*\*\*** <segment code> styling - start **\*\***/
+    /************************\*************************/
+    – html segment start comment: <!--   <segment code> segment - start -->
+    – html segment end comment: <!-- <segment code> segment - end -->
+
+## Segment 0: Navbar (S0-Navbar)
+
+- Fixed at the top of the page (sticky top top while scrolling)
+- Background Color: Black
+- Text Color: secondary color
+- Links: to segment codes S2,S3,S5
+
+## Segment 1: Quote by Opa (S1-Quote)
+
+- Contains a motivational quote about AI
+- Background:  primary-color
+- text color: white
+- quote design: 2 lines of text (see Content->S1) with big quote signs wrapping it
+   - quote signs should be 7 times bigger than text 
+- on smaller screens shrink all to fit to screen (don’t cut text.)
+
+
+
+## Segment 2: AI ChatBots 101 (S2-Class101)
+
+- Contains an accordion widgets for Q&A about AI chatbots
+- Background: 2500X744px image: img/opa_classroom.png
+  - right 50% of image is free space
+  - left 50% of image: the right bottom 25% is free space
+  - on smaller screen
+- Right-aligned on desktop to accommodate background image character
+- On smaller screens; Left 50% of BG image should shrink to screen width
+- Questions: see content below.
+- widget design:
+  - transparent bg, white text white, border
+  - window should open on full right 50% , on smaller screens window should take the whole screen
+
+## Segment 3: Bots Showcase (S3-AIBots)
+
+- Contains an comparison table of bots features and link to service
+- Background: 1280x500px image: img/opa_blue_white_my_flag.png
+  - bottom right 25% is reserved to the background character 
+  - in smaller screens cut the left 50 % of the image 
+- Displays a Table (3 col X 7 rows) of AI-related bots features, max width 750px
+- the borders of the table are invisible
+- align the table to the left (with a bit of padding)
+- the content of the table  should be centered
+- columns and icons must be of similar size 
+- icons max size is max of 100x100 px
+- limit this table to the left 9 columms
+- in smaller screen 
+    - limit this table to the left 7 columms
+    - make the tablke narrower and text/icons smaller
+    
+
+## Segment 4: Favs - (S4-Favs)
+
+- TBD
+
+## Segment 5: Donations (S5-Donations)
+
+- Background: suprise me 
+- Contains A call to action for supporting the project via donations
+- Includes an image linking to PayPal for donations
+- Brief description of how donations support the project
+- image: 440x616px img/opapaypal.png
+
+## Segment 99: Footer (S99-Footer)
+
+- Contains copyright information and a link to Optioanlista.com
+- background: secondary color
+- text primary color
+
+# Content
+
+## S1
+
+- quote text :
+  Think of it like this: AI chatbots are your own personal team of geniuses. <br>
+  They teach, they inspire, they can even help you find a job – all for free!
+- quotee: Opa
+
+## S2
+
+- What are AI Chatbots?
+- What they can do?
+
+## S3
+  | Copilot                  | Gemini                  | ChatGPT                  |
+  | ------------------------ | ----------------------- | ------------------------ |
+  | Microsoft                | Google                  | OpenAI                   |
+  | img/bot-copilot-icon.png | img/bot-gemini-icon.png | img/bot-chatgpt-icon.png |
+  | Image creation3          | Image creation2         | Image creation1          |
+  | Internet Access          | Internet Access         | x                        |
+  | Plugins                  | Plugins                 | x                        |
+  | Chat Styles              |  x                      | x                        |
+  | Notebook                 |  x                      | x                        |
+  | Custom bots              |  x                      | Custom bots              |
+  | ------------------------ | ----------------------- | ------------------------ |
+

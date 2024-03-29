@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #007bff; /* Primary color - Blue */
+  --secondary-color: #ffc107; /* Secondary color - Yellow-orange */
+  --navbar-height: 56px; /* Navbar height */
+}
+
+/*************************************************/
+/******* S0-Navbar styling - start ******/
+/*************************************************/
+
+/* Ensuring the navbar sticks at the top with a specified height */
+.navbar {
+  min-height: var(--navbar-height);
+  background-color: #000 !important; /* Overriding Bootstrap's background color */
+}
+
+/* Customizing navbar brand and link colors */
+.navbar-brand,
+.nav-link {
+  color: var(--secondary-color) !important; /* Setting text color */
+}
+
+.nav-link {
+  margin-right: 1rem; /* Spacing between navbar items */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #fff !important; /* Change color on hover */
+}
+
+/* Adjusting navbar toggler icon color */
+.navbar-toggler {
+  border-color: var(--secondary-color); /* Toggler icon border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 193, 7, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Customizing the toggler icon color */
+}
+
+/* Ensuring content below the navbar does not get hidden */
+body {
+  padding-top: var(--navbar-height);
+}
+
+/*************************************************/
+/******* S0-Navbar styling - end ******/
+/*************************************************/
+
+/*************************************************/
+/******* S1-Quote styling - start ******/
+/*************************************************/
+
+/* S1-Quote styling */
+.S1-Quote {
+  background: linear-gradient(45deg, var(--primary-color), #0056b3);
+  color: white;
+  padding: 4rem 1rem; /* Appropriate padding on top and bottom */
+}
+
+.S1-Quote-text {
+  font-size: 1rem; /* Base font size */
+  margin: 0; /* Reset margin */
+}
+
+.S1-Quote-mark {
+  font-size: 5rem; /* 5x larger than the text */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Align center with the text */
+}
+
+.S1-Quote-start {
+  left: 10px; /* Position at the left */
+}
+
+.S1-Quote-end {
+  right: 10px; /* Position at the right */
+}
+
+.S1-Quote-footer {
+  font-style: italic;
+  font-size: 0.85rem; /* Slightly smaller than the quote text */
+  margin-top: 0.25em; /* Space between the end quote mark and the footer */
+}
+
+@media (max-width: 768px) {
+  .S1-Quote-text {
+    font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
+  }
+  .S1-Quote-mark {
+    font-size: 5rem; /* Adjust if necessary for smaller screens */
+  }
+}
+
+/*************************************************/
+/******* S99-Footer styling - start ******/
+/*************************************************/
+.S99-Footer {
+  background-color: var(
+    --secondary-color
+  ); /* Secondary color for footer background */
+  color: var(--primary-color); /* Primary color for text */
+}
+.S99-Footer-link {
+  color: var(--primary-color); /* Primary color for footer links */
+}
+/*************************************************/

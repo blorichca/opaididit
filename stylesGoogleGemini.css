@@ -1,0 +1,182 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #ffc107;
+  --navbar-height: 56px;
+}
+
+/* S0-Navbar stylin2g - start */
+.navbar-brand {
+  /* Adjust if needed */
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--secondary-color); /* Using your secondary color */
+}
+
+/* S0-Navbar styling - end */
+
+/*************************************************/
+/******* S1-Quote styling - start ******/
+/*************************************************/
+
+#S1-Quote {
+  background-image: url("img/quote_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  max-height: 400px;
+}
+
+.S1-Quote-text-img {
+  position: abs olute;
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%;
+  max-height: 370px;
+  height: 90 0%;
+}
+
+/*************************************************/
+/******* S1-Quote styling - end ******/
+/*************************************************/
+
+/*************************************************/
+/******* S2-Class101 styling - start ******/
+/*************************************************/
+
+#S2-Class101 {
+  background-image: url("img/opa_classroom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px; /* Adjust as needed */
+  padding: 20px;
+}
+
+.S2-Class101-accordion {
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.S2-Class101-accordion .accordion-button {
+  color: white;
+  font-weight: bold;
+}
+
+.S2-Class101-accordion .accordion-body {
+  color: white;
+}
+/*************************************************/
+/******* S2-Class101 styling - end ******/
+/*************************************************/
+
+/*************************************************/
+/******* S3-AIBots styling - start ******/
+/*************************************************/
+
+#S3-AIBots {
+  background-image: url("img/opa_blue_white_my_flag.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom; /* Align background to bottom right */
+  padding: 20px;
+}
+
+#S3-AIBots .table img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain; /* Prevent distortion */
+}
+
+@media (max-width: 768px) {
+  #S3-AIBots {
+    background-size: auto 50%; /* Shrink image to screen width on smaller screens */
+    background-position: left bottom; /* Position the image to the left */
+  }
+}
+
+/*************************************************/
+/******* S3-AIBots styling - start ******/
+/*************************************************/
+
+#S3-AIBots {
+  background: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom; /* [REQ] Reserve bottom right 25% for character */
+  min-height: 500px; /* Adjust as needed for table visibility */
+}
+
+#S3-AIBots .table-container {
+  padding-left: 10px; /* [REQ] Adds space between the table and the left edge */
+}
+
+#S3-AIBots .table {
+  max-width: 750px; /* [REQ]  Limits the maximum table width */
+  margin: 0 auto; /* [REQ] Centers the table horizontally */
+  border-collapse: collapse; /* [REQ] Removes default table cell borders */
+  align-self: flex-start; /* [REQ] Aligns the table to the left */
+}
+
+#S3-AIBots .table td,
+#S3-AIBots .table th {
+  text-align: center; /* [REQ] Centers content within table cells */
+}
+
+#S3-AIBots .table img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain; /* [REQ] Limits icon size with aspect ratio preservation */
+}
+
+@media (max-width: 768px) {
+  #S3-AIBots {
+    background-size: 50% auto; /* [REQ] Cuts left side of the image on smaller screens */
+    background-position: right bottom; /* [REQ] Keeps right side for the character */
+  }
+
+  #S3-AIBots .table-container {
+    max-width: 90%; /* [REQ] Narrows the table on smaller screens  */
+  }
+
+  #S3-AIBots .table td,
+  #S3-AIBots .table th {
+    font-size: 0.9em; /* Adjust font size as needed */
+  }
+
+  #S3-AIBots .table img {
+    max-width: 80px; /* [REQ] Adjust icon size for smaller screens */
+    max-height: 80px; /* Maintain aspect ratio */
+  }
+}
+
+/*************************************************/
+/******* S3-AIBots styling - end ******/
+/*************************************************/
+
+/************************\*************************/
+/**\*\*\*** S5-Donations styling - start **\*\***/
+/************************\*************************/
+
+.S5-Donations {
+  background: linear-gradient(to right, #007bff, #0056b3, #003e89);
+  color: whitesmoke;
+}
+
+.S5-Donations-title {
+  font-size: 2rem;
+}
+
+.S5-Donations-desc {
+  font-size: 1.2rem;
+}
+
+.S5-Donations-img {
+  max-width: 440px;
+  height: auto;
+}
+
+/************************\*************************/
+/**\*\*\*** S5-Donations styling - end **\*\***/
+/************************\*************************/
